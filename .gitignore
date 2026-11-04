@@ -1,0 +1,43 @@
+# --- runtime output (figures, thumbnails, generated code) ---
+out/
+components/
+library/
+
+# --- local machine overrides ---
+.scifig-config.json
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- node ---
+node_modules/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# --- dev harnesses / local test artifacts (not part of the published plugin) ---
+host/selftest.js
+host/selftest-render.js
+host/integration-real.js
+host/sample-v3.js
+host/sample-v4.js
+host/sample-v5.js
+host/*-report.json
+scripts/_*.py
+scripts/scan_private.py
+scripts/sanitize_for_release.py
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+host/nl-selftest.json

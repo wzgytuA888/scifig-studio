@@ -1,0 +1,14 @@
+# SciFigure Studio bundle patch.
+#
+# Config is intentionally empty so this repo stays portable across machines.
+# Python interpreter resolution order:
+#   1. plugin config (this file / profile patch): `config.python`
+#   2. environment variable SCIFIG_PYTHON
+#   3. local, git-ignored .scifig-config.json  {"python": "..."}
+#   4. <bundle>/.venv/{Scripts/python.exe,bin/python}
+#   5. PATH (`python.exe` on Windows, `python3` elsewhere)
+#
+# Figure output goes to `<bundle>/out` unless `config.workDir` (or SCIFIG_WORKDIR) is set.
+- insert:
+    - id: scifig-studio
+      name: 'dsh-scifig-studio'

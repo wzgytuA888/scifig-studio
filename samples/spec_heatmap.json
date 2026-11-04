@@ -1,0 +1,10 @@
+{
+  "kind": "heatmap",
+  "title": "月均气温",
+  "figure": { "widthMm": 89, "heightMm": 70, "dpi": 300 },
+  "style": { "preset": "sci" },
+  "data": { "source": "heatmap_matrix.csv" },
+  "axes": { "xlabel": "区域", "ylabel": "月份" },
+  "heatmap": { "cmap": "RdBu_r", "centerZero": true, "annotate": true, "annotateFormat": ".1f" },
+  "map": { "colorbar": { "show": true, "label": "气温 (℃)", "location": "right" } }
+}

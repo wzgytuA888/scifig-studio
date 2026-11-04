@@ -1,0 +1,9 @@
+{
+  "kind": "box",
+  "title": "不同土地类型土壤盐分",
+  "figure": { "widthMm": 89, "heightMm": 70, "dpi": 300 },
+  "style": { "preset": "sci" },
+  "data": { "source": "box_salinity.csv", "group": "土地类型", "value": "土壤盐分" },
+  "axes": { "xlabel": "土地类型", "ylabel": "土壤盐分 (dS m⁻¹)" },
+  "box": { "showOutliers": true, "boxWidth": 0.6, "cmap": "Set2" }
+}

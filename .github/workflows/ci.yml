@@ -1,0 +1,60 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Node syntax check
+        run: |
+          node --check index.js
+          node --check client.js
+          for f in host/*.js; do node --check "$f"; done
+
+      - name: Python syntax check
+        run: python -m compileall -q py/scifig py/tools
+
+      - name: Validate generated assets
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('py/scifig')
+          controls = json.loads((root / 'controls.json').read_text(encoding='utf-8'))
+          presets = json.loads((root / 'presets.json').read_text(encoding='utf-8'))
+          palettes = json.loads((root / 'palettes.json').read_text(encoding='utf-8'))
+          paths = {item['path'] for group in controls['groups'] for item in group['items']}
+          assert {'style.palette', 'style.paletteSequential', 'style.paletteDiverging',
+                  'map.projection', 'map.colorbar.palette'} <= paths, 'missing palette/projection controls'
+          assert len(presets['presets']) >= 6, 'expected >= 6 journal presets'
+          assert len(palettes['palettes']) >= 20, 'expected >= 20 palettes'
+          kinds = {p['kind'] for p in palettes['palettes']}
+          assert kinds == {'categorical', 'sequential', 'diverging'}, kinds
+          for group in controls['groups']:
+              assert group.get('appliesTo') in {'map', 'chart', 'compose', 'all'}, group.get('id')
+          print('assets OK:', len(paths), 'controls /', len(presets['presets']), 'presets /',
+                len(palettes['palettes']), 'palettes')
+          PY
+
+      - name: No machine-specific paths
+        run: |
+          if grep -rInE '[A-Za-z]:\\\\' index.js client.js host py; then
+            echo 'found absolute Windows paths'; exit 1
+          fi
+          echo 'paths OK'

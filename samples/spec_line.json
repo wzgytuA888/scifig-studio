@@ -1,0 +1,1 @@
+﻿{"kind":"line","title":"研究区 NDVI 年际变化","data":{"source":"line_timeseries.csv","x":"年份","y":"NDVI"},"axes":{"xlabel":"年份","ylabel":"NDVI"},"figure":{"widthMm":89,"heightMm":65,"dpi":300},"style":{"preset":"sci","font":{"family":"Arial"}}}

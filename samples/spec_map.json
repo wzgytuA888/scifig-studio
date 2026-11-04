@@ -1,0 +1,19 @@
+{
+  "kind": "map",
+  "title": "新疆土壤盐分空间分布",
+  "figure": { "widthMm": 180, "heightMm": 120, "dpi": 300 },
+  "style": { "preset": "sci", "font": { "family": "Arial", "sizeTick": 7 } },
+  "data": { "source": "map_points.csv", "lon": "经度", "lat": "纬度", "value": "土壤盐分", "label": "站点" },
+  "legend": { "show": true, "position": "auto", "title": "站点" },
+  "map": {
+    "projection": "lambert",
+    "extentPreset": "xinjiang",
+    "point": { "mode": "choropleth", "size": 30, "color": "#d62728" },
+    "colorbar": { "show": true, "label": "土壤盐分 (dS m-1)", "location": "right", "cmap": "YlOrRd", "tickFormat": "one_decimal" },
+    "scaleBar": { "show": true, "lengthKm": 300, "position": "lower left" },
+    "northArrow": { "show": true, "style": "arrow", "position": "upper right" },
+    "layers": { "land": true, "ocean": true, "lakes": true, "rivers": true, "coastline": true, "countryBorders": true, "chinaBorder": true, "scsInset": false },
+    "grid": { "show": true, "labelFormat": "degree", "labelTop": false, "labelRight": false }
+  },
+  "text": { "note": "数据来源：自造样例，仅用于渲染测试" }
+}

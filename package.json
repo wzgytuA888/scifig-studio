@@ -1,0 +1,65 @@
+{
+  "name": "dsh-scifig-studio",
+  "version": "1.0.0",
+  "description": "SciFigure Studio: an interactive SCI-figure workbench plugin for DeepSeek Harness (maps with projection switching, statistical charts, journal presets, palette library, generated Python code).",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "scientific-figures",
+    "matplotlib",
+    "cartopy",
+    "cartography",
+    "publication-figures"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "host/*.js",
+    "py/scifig/**",
+    "py/tools/**",
+    "docs/**",
+    "samples/**",
+    "scripts/*.py",
+    "scripts/*.ps1",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "check:client": "node --check client.js",
+    "check:host": "node --check index.js",
+    "check:py": "python -m compileall -q py/scifig",
+    "selftest:py": "python py/tools/selftest.py --mode samples"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wzgytuA888/scifig-studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wzgytuA888/scifig-studio/issues"
+  },
+  "homepage": "https://github.com/wzgytuA888/scifig-studio#readme"
+}

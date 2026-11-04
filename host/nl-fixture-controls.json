@@ -1,0 +1,623 @@
+{
+  "version": 1,
+  "_comment": "hostplg 自测用控件清单 fixture：renderer 的 py/scifig/controls.json 就绪后本文件不再被使用。结构严格按契约 §3.3。",
+  "groups": [
+    {
+      "id": "output",
+      "labelZh": "画幅输出",
+      "labelEn": "Figure output",
+      "order": 10,
+      "items": [
+        {
+          "path": "figure.widthMm",
+          "type": "number",
+          "labelZh": "图幅宽度",
+          "labelEn": "Figure width",
+          "level": "basic",
+          "min": 40,
+          "max": 300,
+          "step": 1,
+          "unit": "mm",
+          "default": 180,
+          "aliases": ["图宽", "画幅宽度", "宽度", "单栏宽"]
+        },
+        {
+          "path": "figure.heightMm",
+          "type": "number",
+          "labelZh": "图幅高度",
+          "labelEn": "Figure height",
+          "level": "basic",
+          "min": 30,
+          "max": 300,
+          "step": 1,
+          "unit": "mm",
+          "default": 120,
+          "aliases": ["图高", "画幅高度", "高度"]
+        },
+        {
+          "path": "figure.dpi",
+          "type": "number",
+          "labelZh": "输出分辨率",
+          "labelEn": "Output dpi",
+          "level": "basic",
+          "min": 72,
+          "max": 600,
+          "step": 1,
+          "integer": true,
+          "unit": "dpi",
+          "default": 300,
+          "aliases": ["dpi", "分辨率", "输出 dpi", "清晰度"]
+        }
+      ]
+    },
+    {
+      "id": "preset",
+      "labelZh": "期刊风格",
+      "labelEn": "Journal preset",
+      "order": 20,
+      "items": [
+        {
+          "path": "style.preset",
+          "type": "enum",
+          "labelZh": "期刊风格",
+          "labelEn": "Journal preset",
+          "level": "basic",
+          "default": "general",
+          "options": ["general", "nature", "science", "elsevier"],
+          "optionLabels": {
+            "general": "通用SCI",
+            "nature": "Nature",
+            "science": "Science",
+            "elsevier": "Elsevier"
+          },
+          "aliases": ["风格", "风格模板", "期刊模板"]
+        }
+      ]
+    },
+    {
+      "id": "projection",
+      "labelZh": "地图投影",
+      "labelEn": "Map projection",
+      "order": 40,
+      "items": [
+        {
+          "path": "map.projection",
+          "type": "enum",
+          "labelZh": "地图投影",
+          "labelEn": "Map projection",
+          "level": "basic",
+          "default": "robin",
+          "options": ["mercator", "lambert", "robin", "albers", "platecarree"],
+          "optionLabels": {
+            "mercator": "墨卡托",
+            "lambert": "兰伯特",
+            "robin": "罗宾逊",
+            "albers": "阿尔伯斯",
+            "platecarree": "等经纬"
+          },
+          "aliases": ["投影", "投影方式", "投影类型"]
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "labelZh": "地图要素",
+      "labelEn": "Map elements",
+      "order": 50,
+      "items": [
+        {
+          "path": "map.showGraticule",
+          "type": "bool",
+          "labelZh": "经纬网",
+          "labelEn": "Graticule",
+          "level": "basic",
+          "default": true,
+          "aliases": ["显示经纬网", "网格线", "经纬线"]
+        },
+        {
+          "path": "map.graticuleSpacingDeg",
+          "type": "number",
+          "labelZh": "经纬网间距",
+          "labelEn": "Graticule spacing",
+          "level": "advanced",
+          "min": 1,
+          "max": 30,
+          "step": 1,
+          "unit": "°",
+          "default": 10
+        },
+        {
+          "path": "map.graticuleLabelFormat",
+          "type": "enum",
+          "labelZh": "经纬网标注格式",
+          "labelEn": "Graticule label format",
+          "level": "advanced",
+          "default": "deg",
+          "options": ["deg", "degmin"],
+          "optionLabels": { "deg": "度", "degmin": "度分" }
+        },
+        {
+          "path": "map.graticuleTopRight",
+          "type": "bool",
+          "labelZh": "上右边框标注",
+          "labelEn": "Top/right graticule labels",
+          "level": "advanced",
+          "default": true
+        },
+        {
+          "path": "map.showCoastline",
+          "type": "bool",
+          "labelZh": "海岸线",
+          "labelEn": "Coastline",
+          "level": "basic",
+          "default": true,
+          "aliases": ["显示海岸线"]
+        },
+        {
+          "path": "map.showAdmin",
+          "type": "bool",
+          "labelZh": "行政界线",
+          "labelEn": "Admin boundaries",
+          "level": "basic",
+          "default": true,
+          "aliases": ["省界", "国界", "行政边界"]
+        },
+        {
+          "path": "map.showRivers",
+          "type": "bool",
+          "labelZh": "河流",
+          "labelEn": "Rivers",
+          "level": "advanced",
+          "default": false,
+          "aliases": ["显示河流", "水系"]
+        },
+        {
+          "path": "map.showLakes",
+          "type": "bool",
+          "labelZh": "湖泊",
+          "labelEn": "Lakes",
+          "level": "advanced",
+          "default": true,
+          "aliases": ["显示湖泊"]
+        },
+        {
+          "path": "map.showSouthChinaSeaInset",
+          "type": "bool",
+          "labelZh": "南海诸岛插图",
+          "labelEn": "South China Sea inset",
+          "level": "basic",
+          "default": false,
+          "aliases": ["南海诸岛", "南海插图", "九段线插图"]
+        },
+        {
+          "path": "map.showNorthArrow",
+          "type": "bool",
+          "labelZh": "指北针",
+          "labelEn": "North arrow",
+          "level": "basic",
+          "default": true,
+          "aliases": ["显示指北针", "指北"]
+        },
+        {
+          "path": "map.showScaleBar",
+          "type": "bool",
+          "labelZh": "比例尺",
+          "labelEn": "Scale bar",
+          "level": "basic",
+          "default": true,
+          "aliases": ["显示比例尺"]
+        }
+      ]
+    },
+    {
+      "id": "colorbar",
+      "labelZh": "色带",
+      "labelEn": "Colorbar",
+      "order": 55,
+      "items": [
+        {
+          "path": "colorbar.show",
+          "type": "bool",
+          "labelZh": "显示色带",
+          "labelEn": "Show colorbar",
+          "level": "basic",
+          "default": true,
+          "aliases": ["色带", "颜色条", "色标"]
+        },
+        {
+          "path": "colorbar.position",
+          "type": "enum",
+          "labelZh": "色带位置",
+          "labelEn": "Colorbar position",
+          "level": "basic",
+          "default": "right",
+          "options": ["right", "bottom", "inside", "left"],
+          "optionLabels": { "right": "右侧", "bottom": "下方", "inside": "内嵌", "left": "左侧" },
+          "aliases": ["色带位置", "颜色条位置"]
+        },
+        {
+          "path": "colorbar.orientation",
+          "type": "enum",
+          "labelZh": "色带方向",
+          "labelEn": "Colorbar orientation",
+          "level": "advanced",
+          "default": "vertical",
+          "options": ["vertical", "horizontal"],
+          "optionLabels": { "vertical": "垂直", "horizontal": "水平" }
+        },
+        {
+          "path": "colorbar.label",
+          "type": "text",
+          "labelZh": "色带标题",
+          "labelEn": "Colorbar label",
+          "level": "basic",
+          "default": "",
+          "aliases": ["颜色条标题", "色带名称"]
+        },
+        {
+          "path": "colorbar.unit",
+          "type": "text",
+          "labelZh": "色带单位",
+          "labelEn": "Colorbar unit",
+          "level": "basic",
+          "default": "",
+          "aliases": ["单位"]
+        },
+        {
+          "path": "colorbar.ticks",
+          "type": "number",
+          "labelZh": "色带刻度数",
+          "labelEn": "Colorbar ticks",
+          "level": "advanced",
+          "min": 2,
+          "max": 12,
+          "step": 1,
+          "integer": true,
+          "default": 5
+        },
+        {
+          "path": "colorbar.cmap",
+          "type": "enum",
+          "labelZh": "色带配色",
+          "labelEn": "Colormap",
+          "level": "basic",
+          "default": "viridis",
+          "options": ["viridis", "RdYlBu", "Blues", "Greens", "Spectral"],
+          "optionLabels": {
+            "viridis": "蓝绿",
+            "RdYlBu": "红黄蓝",
+            "Blues": "蓝色系",
+            "Greens": "绿色系",
+            "Spectral": "光谱"
+          },
+          "aliases": ["配色", "颜色映射"]
+        }
+      ]
+    },
+    {
+      "id": "legend",
+      "labelZh": "图例",
+      "labelEn": "Legend",
+      "order": 60,
+      "items": [
+        {
+          "path": "legend.show",
+          "type": "bool",
+          "labelZh": "显示图例",
+          "labelEn": "Show legend",
+          "level": "basic",
+          "default": true,
+          "aliases": ["图例"]
+        },
+        {
+          "path": "legend.position",
+          "type": "enum",
+          "labelZh": "图例位置",
+          "labelEn": "Legend position",
+          "level": "basic",
+          "default": "auto",
+          "options": ["auto", "upper right", "lower right", "upper left", "lower left", "outside right", "below"],
+          "optionLabels": {
+            "auto": "自动避让",
+            "upper right": "右上",
+            "lower right": "右下",
+            "upper left": "左上",
+            "lower left": "左下",
+            "outside right": "图外右侧",
+            "below": "图下方"
+          },
+          "aliases": ["图例位置", "图例放哪", "legend position"],
+          "help": "auto 会按数据密度自动选遮挡最少的位置"
+        },
+        {
+          "path": "legend.fontSize",
+          "type": "number",
+          "labelZh": "图例字号",
+          "labelEn": "Legend font size",
+          "level": "basic",
+          "min": 4,
+          "max": 20,
+          "step": 0.5,
+          "unit": "pt",
+          "default": 8,
+          "aliases": ["图例字体大小", "图例字号大小"]
+        },
+        {
+          "path": "legend.frame",
+          "type": "bool",
+          "labelZh": "图例边框",
+          "labelEn": "Legend frame",
+          "level": "advanced",
+          "default": true
+        },
+        {
+          "path": "legend.columns",
+          "type": "number",
+          "labelZh": "图例列数",
+          "labelEn": "Legend columns",
+          "level": "advanced",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "integer": true,
+          "default": 1
+        }
+      ]
+    },
+    {
+      "id": "font",
+      "labelZh": "字体字号",
+      "labelEn": "Fonts",
+      "order": 70,
+      "items": [
+        {
+          "path": "style.font.family",
+          "type": "enum",
+          "labelZh": "字体",
+          "labelEn": "Font family",
+          "level": "basic",
+          "default": "Arial",
+          "options": ["Arial", "Times New Roman", "SimSun", "SimHei", "Microsoft YaHei"],
+          "optionLabels": {
+            "Arial": "Arial",
+            "Times New Roman": "Times New Roman",
+            "SimSun": "宋体",
+            "SimHei": "黑体",
+            "Microsoft YaHei": "微软雅黑"
+          },
+          "aliases": ["字体族", "字形"]
+        },
+        {
+          "path": "style.font.sizeAxis",
+          "type": "number",
+          "labelZh": "字号",
+          "labelEn": "Axis font size",
+          "level": "basic",
+          "min": 4,
+          "max": 16,
+          "step": 0.5,
+          "unit": "pt",
+          "default": 7,
+          "aliases": ["轴字号", "坐标轴字号", "刻度字号"]
+        },
+        {
+          "path": "style.font.sizeTitle",
+          "type": "number",
+          "labelZh": "标题字号",
+          "labelEn": "Title font size",
+          "level": "basic",
+          "min": 6,
+          "max": 24,
+          "step": 1,
+          "unit": "pt",
+          "default": 9,
+          "aliases": ["标题字体大小"]
+        },
+        {
+          "path": "style.font.sizeLabel",
+          "type": "number",
+          "labelZh": "标签字号",
+          "labelEn": "Label font size",
+          "level": "advanced",
+          "min": 4,
+          "max": 16,
+          "step": 0.5,
+          "unit": "pt",
+          "default": 7
+        }
+      ]
+    },
+    {
+      "id": "line",
+      "labelZh": "线宽与标记",
+      "labelEn": "Lines and markers",
+      "order": 75,
+      "items": [
+        {
+          "path": "style.lineWidth",
+          "type": "number",
+          "labelZh": "线宽",
+          "labelEn": "Line width",
+          "level": "basic",
+          "min": 0.2,
+          "max": 3,
+          "step": 0.1,
+          "unit": "pt",
+          "default": 1,
+          "aliases": ["线条粗细", "线粗", "线条宽度"]
+        },
+        {
+          "path": "style.markerSize",
+          "type": "number",
+          "labelZh": "标记大小",
+          "labelEn": "Marker size",
+          "level": "advanced",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "unit": "pt",
+          "default": 4,
+          "aliases": ["点大小", "符号大小"]
+        },
+        {
+          "path": "style.markerShape",
+          "type": "enum",
+          "labelZh": "标记形状",
+          "labelEn": "Marker shape",
+          "level": "advanced",
+          "default": "o",
+          "options": ["o", "s", "^", "D"],
+          "optionLabels": { "o": "圆形", "s": "方形", "^": "三角形", "D": "菱形" }
+        }
+      ]
+    },
+    {
+      "id": "axes",
+      "labelZh": "轴与刻度",
+      "labelEn": "Axes and ticks",
+      "order": 80,
+      "items": [
+        {
+          "path": "axes.spinesTop",
+          "type": "bool",
+          "labelZh": "显示上边框",
+          "labelEn": "Top spine",
+          "level": "basic",
+          "default": true,
+          "aliases": ["上边框", "上边线", "顶部边框"]
+        },
+        {
+          "path": "axes.spinesRight",
+          "type": "bool",
+          "labelZh": "显示右边框",
+          "labelEn": "Right spine",
+          "level": "basic",
+          "default": true,
+          "aliases": ["右边框", "右边线", "右侧边框"]
+        },
+        {
+          "path": "axes.tickDirection",
+          "type": "enum",
+          "labelZh": "刻度朝向",
+          "labelEn": "Tick direction",
+          "level": "basic",
+          "default": "in",
+          "options": ["in", "out"],
+          "optionLabels": { "in": "朝内", "out": "朝外" },
+          "aliases": ["刻度方向"]
+        },
+        {
+          "path": "axes.grid",
+          "type": "bool",
+          "labelZh": "显示网格",
+          "labelEn": "Grid",
+          "level": "advanced",
+          "default": false,
+          "aliases": ["网格"]
+        },
+        {
+          "path": "axes.tickLength",
+          "type": "number",
+          "labelZh": "刻度长度",
+          "labelEn": "Tick length",
+          "level": "advanced",
+          "min": 1,
+          "max": 10,
+          "step": 0.5,
+          "unit": "pt",
+          "default": 3.5
+        }
+      ]
+    },
+    {
+      "id": "text",
+      "labelZh": "标题与标注",
+      "labelEn": "Titles and annotations",
+      "order": 85,
+      "items": [
+        {
+          "path": "text.dataSource",
+          "type": "text",
+          "labelZh": "数据来源",
+          "labelEn": "Data source",
+          "level": "advanced",
+          "default": "",
+          "aliases": ["数据来源脚注", "来源说明"]
+        },
+        {
+          "path": "text.unit",
+          "type": "text",
+          "labelZh": "单位标注",
+          "labelEn": "Unit label",
+          "level": "advanced",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "id": "compose",
+      "labelZh": "排版",
+      "labelEn": "Composition",
+      "order": 90,
+      "items": [
+        {
+          "path": "compose.optimize",
+          "type": "bool",
+          "labelZh": "排版优化",
+          "labelEn": "Layout optimize",
+          "level": "basic",
+          "default": true,
+          "aliases": ["优化排版", "自动排版"]
+        },
+        {
+          "path": "compose.rows",
+          "type": "number",
+          "labelZh": "行数",
+          "labelEn": "Rows",
+          "level": "basic",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "integer": true,
+          "default": 1
+        },
+        {
+          "path": "compose.cols",
+          "type": "number",
+          "labelZh": "列数",
+          "labelEn": "Columns",
+          "level": "basic",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "integer": true,
+          "default": 1
+        },
+        {
+          "path": "compose.gapXMm",
+          "type": "number",
+          "labelZh": "面板水平间距",
+          "labelEn": "Panel gap X",
+          "level": "advanced",
+          "min": 0,
+          "max": 20,
+          "step": 0.5,
+          "unit": "mm",
+          "default": 2
+        },
+        {
+          "path": "compose.gapYMm",
+          "type": "number",
+          "labelZh": "面板垂直间距",
+          "labelEn": "Panel gap Y",
+          "level": "advanced",
+          "min": 0,
+          "max": 20,
+          "step": 0.5,
+          "unit": "mm",
+          "default": 2
+        }
+      ]
+    }
+  ]
+}

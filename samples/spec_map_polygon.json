@@ -1,0 +1,16 @@
+{
+  "kind": "map",
+  "title": "新疆盐渍化分区（分级设色）",
+  "figure": { "widthMm": 180, "heightMm": 120, "dpi": 300 },
+  "style": { "preset": "sci", "font": { "family": "Arial" } },
+  "data": { "source": "map_polygons.geojson", "value": "soil_salinity", "label": "name" },
+  "map": {
+    "projection": "albers",
+    "extentPreset": "xinjiang",
+    "choropleth": { "scheme": "quantile", "classes": 5 },
+    "colorbar": { "show": true, "label": "土壤盐分 (dS m-1)", "location": "right", "cmap": "YlOrRd" },
+    "scaleBar": { "show": true, "lengthKm": 300 },
+    "northArrow": { "show": true, "position": "upper left" },
+    "layers": { "rivers": true, "chinaBorder": true, "scsInset": false }
+  }
+}

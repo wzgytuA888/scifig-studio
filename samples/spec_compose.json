@@ -1,0 +1,56 @@
+{
+  "kind": "compose",
+  "title": "研究区概况与主要结果",
+  "figure": { "widthMm": 180, "heightMm": 150, "dpi": 300 },
+  "style": { "preset": "sci" },
+  "text": { "note": "数据来源：自造样例，仅用于渲染测试" },
+  "compose": {
+    "rows": 2,
+    "cols": 2,
+    "gapXMm": 4,
+    "gapYMm": 5,
+    "align": "axes",
+    "optimize": true,
+    "shareColorbar": false,
+    "legendPerPanel": true,
+    "panelLabel": { "show": true, "style": "(a)", "position": "upper left" }
+  },
+  "panels": [
+    {
+      "kind": "map",
+      "title": "研究区位置",
+      "data": { "source": "map_points.csv", "lon": "经度", "lat": "纬度", "value": "土壤盐分" },
+      "map": {
+        "projection": "lambert",
+        "extentPreset": "xinjiang",
+        "colorbar": { "show": true, "label": "土壤盐分 (dS m-1)", "location": "right" },
+        "point": { "mode": "choropleth", "size": 22 },
+        "scaleBar": { "show": true, "lengthKm": 300 },
+        "northArrow": { "show": true },
+        "grid": { "show": true, "labelFormat": "degree" }
+      }
+    },
+    {
+      "kind": "line",
+      "title": "NDVI 年际变化",
+      "data": { "source": "line_timeseries.csv", "x": "年份", "y": "NDVI" },
+      "axes": { "xlabel": "年份", "ylabel": "NDVI" }
+    },
+    {
+      "kind": "bar",
+      "title": "土地利用结构",
+      "data": { "source": "bar_grouped.csv", "group": "土地利用类型" },
+      "axes": { "ylabel": "面积 (km²)" },
+      "bar": { "mode": "group", "cmap": "Set2" },
+      "legend": { "position": "auto", "fontSize": 6 }
+    },
+    {
+      "kind": "scatter",
+      "title": "降水与 NDVI 关系",
+      "data": { "source": "scatter.csv", "x": "年均降水", "y": "NDVI", "group": "区域" },
+      "axes": { "xlabel": "年均降水 (mm)", "ylabel": "NDVI" },
+      "scatter": { "fit": "linear" },
+      "legend": { "position": "auto", "fontSize": 6 }
+    }
+  ]
+}

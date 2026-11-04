@@ -1,0 +1,9 @@
+{
+  "kind": "line",
+  "title": "带定制注记的折线图",
+  "figure": { "widthMm": 89, "heightMm": 65, "dpi": 300 },
+  "style": { "preset": "sci" },
+  "data": { "source": "line_timeseries.csv", "x": "年份", "y": "NDVI" },
+  "axes": { "xlabel": "年份", "ylabel": "NDVI" },
+  "customPatch": "ax.axvline(2010, color='#d62728', linestyle='--', linewidth=0.8)\nax.annotate('2010 转折点', xy=(2010, 0.26), xytext=(2012, 0.23), fontsize=7,\n            arrowprops=dict(arrowstyle='->', color='#d62728', linewidth=0.8), color='#d62728')\nfig.text(0.99, 0.005, 'customPatch: 参考线 + 箭头标注', ha='right', va='bottom', fontsize=6)"
+}

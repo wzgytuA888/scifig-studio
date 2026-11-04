@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SciFigure Studio">
+  <defs>
+    <linearGradient id="sfg-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12324f"/>
+      <stop offset="1" stop-color="#1d5c86"/>
+    </linearGradient>
+    <linearGradient id="sfg-map" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7fd4c1"/>
+      <stop offset="1" stop-color="#4aa3d8"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#sfg-bg)"/>
+  <!-- frame of a scientific figure -->
+  <rect x="10" y="14" width="44" height="34" rx="3" fill="#0d2436" stroke="#cfe6f5" stroke-width="1.6"/>
+  <!-- landmass / study area -->
+  <path d="M15 40c4-2 5-8 10-9 4-1 5 3 8 2 3-1 4-6 8-5 4 1 5 6 8 5v11H15z" fill="url(#sfg-map)" opacity="0.92"/>
+  <!-- graticule -->
+  <g stroke="#cfe6f5" stroke-width="0.8" opacity="0.5">
+    <path d="M10 22h44M10 31h44M10 40h44"/>
+    <path d="M21 14v34M32 14v34M43 14v34"/>
+  </g>
+  <!-- legend swatch, the tunable the studio owns -->
+  <g>
+    <rect x="36" y="18" width="14" height="9" rx="1.6" fill="#ffffff" opacity="0.92"/>
+    <rect x="38" y="20.5" width="3.4" height="2.2" rx="0.6" fill="#1d5c86"/>
+    <rect x="43" y="20.5" width="5" height="1" rx="0.5" fill="#1d5c86"/>
+    <rect x="38" y="24" width="3.4" height="2.2" rx="0.6" fill="#7fd4c1"/>
+    <rect x="43" y="24" width="5" height="1" rx="0.5" fill="#1d5c86"/>
+  </g>
+  <!-- north arrow -->
+  <path d="M17 20l3-5 3 5-3-1.6z" fill="#f2c14e"/>
+  <!-- ruler / scale bar -->
+  <g fill="#cfe6f5">
+    <rect x="15" y="43.4" width="6" height="1.8"/>
+    <rect x="21" y="43.4" width="6" height="1.8" opacity="0.55"/>
+  </g>
+</svg>

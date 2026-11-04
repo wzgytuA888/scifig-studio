@@ -1,0 +1,10 @@
+{
+  "kind": "scatter",
+  "title": "降水与 NDVI 的关系",
+  "figure": { "widthMm": 89, "heightMm": 70, "dpi": 300 },
+  "style": { "preset": "sci" },
+  "data": { "source": "scatter.csv", "x": "年均降水", "y": "NDVI", "group": "区域" },
+  "axes": { "xlabel": "年均降水 (mm)", "ylabel": "NDVI" },
+  "scatter": { "fit": "linear", "showEquation": true },
+  "legend": { "position": "auto" }
+}

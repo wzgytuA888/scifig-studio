@@ -1,0 +1,45 @@
+{
+  "kind": "compose",
+  "title": "三面板合成图（2×2 留空）",
+  "figure": { "widthMm": 180, "heightMm": 150, "dpi": 300 },
+  "style": { "preset": "sci" },
+  "text": { "note": "数据来源：自造样例，仅用于渲染测试" },
+  "compose": {
+    "optimize": true,
+    "align": "axes",
+    "gapXMm": 4,
+    "gapYMm": 5,
+    "shareColorbar": false,
+    "legendPerPanel": true,
+    "panelLabel": { "show": true, "style": "(a)", "position": "upper left" }
+  },
+  "panels": [
+    {
+      "kind": "map",
+      "title": "研究区位置",
+      "data": { "source": "map_points.csv", "lon": "经度", "lat": "纬度", "value": "土壤盐分" },
+      "map": {
+        "projection": "lambert",
+        "extentPreset": "xinjiang",
+        "colorbar": { "show": true, "label": "土壤盐分 (dS m-1)", "location": "right" },
+        "point": { "mode": "choropleth", "size": 22 },
+        "scaleBar": { "show": true, "lengthKm": 500 },
+        "northArrow": { "show": true },
+        "grid": { "show": true, "labelFormat": "degree" }
+      }
+    },
+    {
+      "kind": "bar",
+      "title": "土地利用结构",
+      "data": { "source": "bar_grouped.csv", "group": "土地利用类型" },
+      "axes": { "ylabel": "面积 (km²)" },
+      "bar": { "mode": "group", "cmap": "Set2" }
+    },
+    {
+      "kind": "line",
+      "title": "NDVI 年际变化",
+      "data": { "source": "line_timeseries.csv", "x": "年份", "y": "NDVI" },
+      "axes": { "xlabel": "年份", "ylabel": "NDVI" }
+    }
+  ]
+}

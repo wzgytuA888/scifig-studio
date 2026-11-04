@@ -1,0 +1,635 @@
+{
+ "version": 1,
+ "source": "reference-deck.pptx",
+ "generatedBy": "scripts/extract_palettes.py",
+ "counts": {
+  "themes": 2,
+  "slides": 104,
+  "charts": 0,
+  "media": 173,
+  "image_palettes": 173,
+  "merged_groups": 16,
+  "palettes": 33
+ },
+ "palettes": [
+  {
+   "id": "ppt-01",
+   "name": "蓝 · 金 · 橙（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#7EABCC",
+    "#BFDBEF",
+    "#356D9E",
+    "#E3C99F",
+    "#9EC8E2",
+    "#D1AC8D"
+   ],
+   "source": "内嵌图片 image145.png、image72.png、image61.png、image110.png",
+   "usage": {
+    "figures": 25,
+    "note": "参考 PPT 中有 25 张图使用这套配色"
+   },
+   "_base": "蓝 · 金 · 橙（6 色）",
+   "colorsText": "#7EABCC #BFDBEF #356D9E #E3C99F #9EC8E2 #D1AC8D"
+  },
+  {
+   "id": "ppt-02",
+   "name": "天蓝 · 橙（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#6791A2",
+    "#2A3E40",
+    "#D4E8EE",
+    "#935343",
+    "#94B8C7",
+    "#B2D7E3"
+   ],
+   "source": "内嵌图片 image3.png、image117.png、image47.png、image82.png",
+   "usage": {
+    "figures": 22,
+    "note": "参考 PPT 中有 22 张图使用这套配色"
+   },
+   "_base": "天蓝 · 橙（6 色）",
+   "colorsText": "#6791A2 #2A3E40 #D4E8EE #935343 #94B8C7 #B2D7E3"
+  },
+  {
+   "id": "ppt-03",
+   "name": "玫红 · 蓝紫 · 灰（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#71657F",
+    "#C69FBB",
+    "#F0EDEE",
+    "#595E79",
+    "#4C526E",
+    "#966B80"
+   ],
+   "source": "内嵌图片 image18.png、image44.png、image15.png、image139.png",
+   "usage": {
+    "figures": 20,
+    "note": "参考 PPT 中有 20 张图使用这套配色"
+   },
+   "_base": "玫红 · 蓝紫 · 灰（6 色）",
+   "colorsText": "#71657F #C69FBB #F0EDEE #595E79 #4C526E #966B80"
+  },
+  {
+   "id": "ppt-04",
+   "name": "金 · 橙 · 红（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#9A4949",
+    "#D4D7C9",
+    "#4E2934",
+    "#B8917C",
+    "#E4916B",
+    "#F5CB8F"
+   ],
+   "source": "内嵌图片 image108.jpeg、image4.png、image153.png、image105.png",
+   "usage": {
+    "figures": 17,
+    "note": "参考 PPT 中有 17 张图使用这套配色"
+   },
+   "_base": "金 · 橙 · 红（6 色）",
+   "colorsText": "#9A4949 #D4D7C9 #4E2934 #B8917C #E4916B #F5CB8F"
+  },
+  {
+   "id": "ppt-05",
+   "name": "金 · 橙 · 玫红（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#CACCD7",
+    "#F7C811",
+    "#9CA0CC",
+    "#D53263",
+    "#B2B2C3",
+    "#EC8146"
+   ],
+   "source": "内嵌图片 image34.png、image170.png、image147.png、image144.png",
+   "usage": {
+    "figures": 14,
+    "note": "参考 PPT 中有 14 张图使用这套配色"
+   },
+   "_base": "金 · 橙 · 玫红（6 色）",
+   "colorsText": "#CACCD7 #F7C811 #9CA0CC #D53263 #B2B2C3 #EC8146"
+  },
+  {
+   "id": "ppt-06",
+   "name": "红 · 青 · 紫（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#D65350",
+    "#6AAD92",
+    "#489D84",
+    "#8175A1",
+    "#E0786F",
+    "#C9B9BE"
+   ],
+   "source": "内嵌图片 image151.png、image157.jpeg、image107.png、image40.png",
+   "usage": {
+    "figures": 12,
+    "note": "参考 PPT 中有 12 张图使用这套配色"
+   },
+   "_base": "红 · 青 · 紫（6 色）",
+   "colorsText": "#D65350 #6AAD92 #489D84 #8175A1 #E0786F #C9B9BE"
+  },
+  {
+   "id": "ppt-07",
+   "name": "金 · 红 · 天蓝（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#4DB1BE",
+    "#D2D8CF",
+    "#F5EAA8",
+    "#CDB384",
+    "#D03D20",
+    "#96D4D9"
+   ],
+   "source": "内嵌图片 image125.png、image32.png、image169.png、image94.png",
+   "usage": {
+    "figures": 12,
+    "note": "参考 PPT 中有 12 张图使用这套配色"
+   },
+   "_base": "金 · 红 · 天蓝（6 色）",
+   "colorsText": "#4DB1BE #D2D8CF #F5EAA8 #CDB384 #D03D20 #96D4D9"
+  },
+  {
+   "id": "ppt-08",
+   "name": "橙 · 红 · 灰（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#FDCFB9",
+    "#F3F1EF",
+    "#71778A",
+    "#F20907",
+    "#761521",
+    "#E7AEAA"
+   ],
+   "source": "内嵌图片 image102.png、image74.png、image1.png、image31.png",
+   "usage": {
+    "figures": 11,
+    "note": "参考 PPT 中有 11 张图使用这套配色"
+   },
+   "_base": "橙 · 红 · 灰（6 色）",
+   "colorsText": "#FDCFB9 #F3F1EF #71778A #F20907 #761521 #E7AEAA"
+  },
+  {
+   "id": "ppt-09",
+   "name": "青绿 · 灰（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#C3CCC1",
+    "#E8ECEE",
+    "#8C8378",
+    "#32821A",
+    "#2C8218",
+    "#74695A"
+   ],
+   "source": "内嵌图片 image87.png、image35.png、image80.png、image126.png",
+   "usage": {
+    "figures": 10,
+    "note": "参考 PPT 中有 10 张图使用这套配色"
+   },
+   "_base": "青绿 · 灰（6 色）",
+   "colorsText": "#C3CCC1 #E8ECEE #8C8378 #32821A #2C8218 #74695A"
+  },
+  {
+   "id": "ppt-10",
+   "name": "玫红 · 紫 · 青（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#CD7390",
+    "#749C90",
+    "#543470",
+    "#F12188",
+    "#E5E0E0",
+    "#747E8C"
+   ],
+   "source": "内嵌图片 image113.png、image36.png、image73.png、image83.png",
+   "usage": {
+    "figures": 9,
+    "note": "参考 PPT 中有 9 张图使用这套配色"
+   },
+   "_base": "玫红 · 紫 · 青（6 色）",
+   "colorsText": "#CD7390 #749C90 #543470 #F12188 #E5E0E0 #747E8C"
+  },
+  {
+   "id": "ppt-11",
+   "name": "橙 · 红 · 青绿（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#6EA442",
+    "#EB6248",
+    "#3E9F51",
+    "#FBD7C1",
+    "#D18C6D",
+    "#BBDAC9"
+   ],
+   "source": "内嵌图片 image41.png、image119.png、image148.png、image46.png",
+   "usage": {
+    "figures": 8,
+    "note": "参考 PPT 中有 8 张图使用这套配色"
+   },
+   "_base": "橙 · 红 · 青绿（6 色）",
+   "colorsText": "#6EA442 #EB6248 #3E9F51 #FBD7C1 #D18C6D #BBDAC9"
+  },
+  {
+   "id": "ppt-12",
+   "name": "金 · 青绿 · 蓝紫（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#7E6002",
+    "#FFF2CC",
+    "#DCE2E1",
+    "#FED863",
+    "#20BE3C",
+    "#3E3B8E"
+   ],
+   "source": "内嵌图片 image111.png、image65.png、image127.png、image81.jpeg",
+   "usage": {
+    "figures": 8,
+    "note": "参考 PPT 中有 8 张图使用这套配色"
+   },
+   "_base": "金 · 青绿 · 蓝紫（6 色）",
+   "colorsText": "#7E6002 #FFF2CC #DCE2E1 #FED863 #20BE3C #3E3B8E"
+  },
+  {
+   "id": "ppt-13",
+   "name": "金 · 红 · 天蓝（6 色） ②",
+   "kind": "categorical",
+   "colors": [
+    "#F3C726",
+    "#4676C4",
+    "#9F896A",
+    "#DD4F5B",
+    "#45A8C6",
+    "#C9D1D2"
+   ],
+   "source": "内嵌图片 image134.png、image92.png",
+   "usage": {
+    "figures": 2,
+    "note": "参考 PPT 中有 2 张图使用这套配色"
+   },
+   "_base": "金 · 红 · 天蓝（6 色）",
+   "colorsText": "#F3C726 #4676C4 #9F896A #DD4F5B #45A8C6 #C9D1D2"
+  },
+  {
+   "id": "ppt-14",
+   "name": "青 · 红 · 玫红（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#C98EB9",
+    "#9C4C87",
+    "#009240",
+    "#FD938E",
+    "#E12931",
+    "#4EB178"
+   ],
+   "source": "内嵌图片 image63.png",
+   "usage": {
+    "figures": 1,
+    "note": "参考 PPT 中有 1 张图使用这套配色"
+   },
+   "_base": "青 · 红 · 玫红（6 色）",
+   "colorsText": "#C98EB9 #9C4C87 #009240 #FD938E #E12931 #4EB178"
+  },
+  {
+   "id": "ppt-15",
+   "name": "金 · 橙 · 红（6 色） ②",
+   "kind": "categorical",
+   "colors": [
+    "#4874CB",
+    "#EE822F",
+    "#F2BA02",
+    "#75BD42",
+    "#30C0B4",
+    "#E54C5E"
+   ],
+   "source": "ppt/theme/theme1.xml",
+   "_base": "金 · 橙 · 红（6 色）",
+   "colorsText": "#4874CB #EE822F #F2BA02 #75BD42 #30C0B4 #E54C5E"
+  },
+  {
+   "id": "ppt-16",
+   "name": "金 · 橙 · 蓝（6 色）",
+   "kind": "categorical",
+   "colors": [
+    "#5B9BD5",
+    "#ED7D31",
+    "#A5A5A5",
+    "#FFC000",
+    "#4472C4",
+    "#70AD47"
+   ],
+   "source": "ppt/theme/theme2.xml",
+   "_base": "金 · 橙 · 蓝（6 色）",
+   "colorsText": "#5B9BD5 #ED7D31 #A5A5A5 #FFC000 #4472C4 #70AD47"
+  },
+  {
+   "id": "ppt-17",
+   "name": "蓝渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#E9F1F6",
+    "#B8D1E3",
+    "#88B1D0",
+    "#5792BD",
+    "#3B6F95",
+    "#274A64",
+    "#142633"
+   ],
+   "source": "由 #7EABCC 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "蓝渐变（7 级）",
+   "colorsText": "#E9F1F6 #B8D1E3 #88B1D0 #5792BD #3B6F95 #274A64 #142633"
+  },
+  {
+   "id": "ppt-18",
+   "name": "蓝与橙发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#375C77",
+    "#4D81A7",
+    "#7AA4C2",
+    "#ABC5D8",
+    "#F4F5F5",
+    "#D2BFB2",
+    "#B79A85",
+    "#9A765B",
+    "#6D5340"
+   ],
+   "source": "由 #7EABCC 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "蓝与橙发散（9 级）",
+   "colorsText": "#375C77 #4D81A7 #7AA4C2 #ABC5D8 #F4F5F5 #D2BFB2 #B79A85 #9A765B #6D5340"
+  },
+  {
+   "id": "ppt-19",
+   "name": "金渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#F8F2E7",
+    "#E9D4B3",
+    "#D9B67E",
+    "#CA9949",
+    "#A1752F",
+    "#6C4F1F",
+    "#372810"
+   ],
+   "source": "由 #E3C99F 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "金渐变（7 级）",
+   "colorsText": "#F8F2E7 #E9D4B3 #D9B67E #CA9949 #A1752F #6C4F1F #372810"
+  },
+  {
+   "id": "ppt-20",
+   "name": "金与蓝发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#7F602E",
+    "#B38841",
+    "#CBA971",
+    "#DEC9A5",
+    "#F5F5F4",
+    "#AEBDD6",
+    "#7E97BE",
+    "#5271A3",
+    "#3A5073"
+   ],
+   "source": "由 #E3C99F 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "金与蓝发散（9 级）",
+   "colorsText": "#7F602E #B38841 #CBA971 #DEC9A5 #F5F5F4 #AEBDD6 #7E97BE #5271A3 #3A5073"
+  },
+  {
+   "id": "ppt-21",
+   "name": "橙渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#F6EFE9",
+    "#E3CCB9",
+    "#CFA988",
+    "#BC8558",
+    "#94643C",
+    "#634328",
+    "#332215"
+   ],
+   "source": "由 #D1AC8D 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "橙渐变（7 级）",
+   "colorsText": "#F6EFE9 #E3CCB9 #CFA988 #BC8558 #94643C #634328 #332215"
+  },
+  {
+   "id": "ppt-22",
+   "name": "橙与蓝发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#765437",
+    "#A7764E",
+    "#C19B7B",
+    "#D8C0AC",
+    "#F5F5F4",
+    "#B2C3D1",
+    "#85A0B7",
+    "#5B7D9A",
+    "#41596D"
+   ],
+   "source": "由 #D1AC8D 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "橙与蓝发散（9 级）",
+   "colorsText": "#765437 #A7764E #C19B7B #D8C0AC #F5F5F4 #B2C3D1 #85A0B7 #5B7D9A #41596D"
+  },
+  {
+   "id": "ppt-23",
+   "name": "玫红渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#F4EBEE",
+    "#DDBEC7",
+    "#C692A1",
+    "#AE657B",
+    "#88475B",
+    "#5B303D",
+    "#2F191F"
+   ],
+   "source": "由 #4E2934 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "玫红渐变（7 级）",
+   "colorsText": "#F4EBEE #DDBEC7 #C692A1 #AE657B #88475B #5B303D #2F191F"
+  },
+  {
+   "id": "ppt-24",
+   "name": "玫红与青发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#6E404D",
+    "#9B5A6D",
+    "#B88494",
+    "#D2B2BB",
+    "#F5F4F5",
+    "#B6CDC6",
+    "#8CB0A5",
+    "#649184",
+    "#47675D"
+   ],
+   "source": "由 #4E2934 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "玫红与青发散（9 级）",
+   "colorsText": "#6E404D #9B5A6D #B88494 #D2B2BB #F5F4F5 #B6CDC6 #8CB0A5 #649184 #47675D"
+  },
+  {
+   "id": "ppt-25",
+   "name": "蓝紫渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#EBECF5",
+    "#BEC1DD",
+    "#9195C6",
+    "#646AAF",
+    "#474C89",
+    "#2F335C",
+    "#181A2F"
+   ],
+   "source": "由 #9CA0CC 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "蓝紫渐变（7 级）",
+   "colorsText": "#EBECF5 #BEC1DD #9195C6 #646AAF #474C89 #2F335C #181A2F"
+  },
+  {
+   "id": "ppt-26",
+   "name": "蓝紫与黄绿发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#3F436E",
+    "#595F9C",
+    "#8488B8",
+    "#B1B4D2",
+    "#F4F4F5",
+    "#CECCB6",
+    "#B1AE8B",
+    "#928E63",
+    "#676546"
+   ],
+   "source": "由 #9CA0CC 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "蓝紫与黄绿发散（9 级）",
+   "colorsText": "#3F436E #595F9C #8488B8 #B1B4D2 #F4F4F5 #CECCB6 #B1AE8B #928E63 #676546"
+  },
+  {
+   "id": "ppt-27",
+   "name": "青渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#EAF5F2",
+    "#BBE0D5",
+    "#8DCBB8",
+    "#5EB59C",
+    "#418E78",
+    "#2C6050",
+    "#163129"
+   ],
+   "source": "由 #489D84 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "青渐变（7 级）",
+   "colorsText": "#EAF5F2 #BBE0D5 #8DCBB8 #5EB59C #418E78 #2C6050 #163129"
+  },
+  {
+   "id": "ppt-28",
+   "name": "青与玫红发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#3B7262",
+    "#54A18A",
+    "#80BDAB",
+    "#AED5CA",
+    "#F4F5F5",
+    "#CFB4BC",
+    "#B48995",
+    "#965F6F",
+    "#6A434F"
+   ],
+   "source": "由 #489D84 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "青与玫红发散（9 级）",
+   "colorsText": "#3B7262 #54A18A #80BDAB #AED5CA #F4F5F5 #CFB4BC #B48995 #965F6F #6A434F"
+  },
+  {
+   "id": "ppt-29",
+   "name": "青绿渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#EAFAE5",
+    "#BCEFAD",
+    "#8EE374",
+    "#60D83B",
+    "#42AD23",
+    "#2D7417",
+    "#173B0C"
+   ],
+   "source": "由 #32821A 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "青绿渐变（7 级）",
+   "colorsText": "#EAFAE5 #BCEFAD #8EE374 #60D83B #42AD23 #2D7417 #173B0C"
+  },
+  {
+   "id": "ppt-30",
+   "name": "青绿与品红发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#3C8826",
+    "#55C035",
+    "#81D567",
+    "#AFE49F",
+    "#F4F5F4",
+    "#CFA9DA",
+    "#B377C5",
+    "#9549AB",
+    "#693479"
+   ],
+   "source": "由 #32821A 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "青绿与品红发散（9 级）",
+   "colorsText": "#3C8826 #55C035 #81D567 #AFE49F #F4F5F4 #CFA9DA #B377C5 #9549AB #693479"
+  },
+  {
+   "id": "ppt-31",
+   "name": "紫渐变（7 级）",
+   "kind": "sequential",
+   "colors": [
+    "#F0EAF5",
+    "#CFBCE0",
+    "#AE8DCA",
+    "#8D5FB5",
+    "#6A428E",
+    "#472C5F",
+    "#251731"
+   ],
+   "source": "由 #543470 派生（单色渐深，可用于连续填色/热力图）",
+   "_base": "紫渐变（7 级）",
+   "colorsText": "#F0EAF5 #CFBCE0 #AE8DCA #8D5FB5 #6A428E #472C5F #251731"
+  },
+  {
+   "id": "ppt-32",
+   "name": "紫与绿发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#583C72",
+    "#7D54A0",
+    "#A080BC",
+    "#C3AFD5",
+    "#F5F4F5",
+    "#C1CFB4",
+    "#9DB389",
+    "#799560",
+    "#556A44"
+   ],
+   "source": "由 #543470 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "紫与绿发散（9 级）",
+   "colorsText": "#583C72 #7D54A0 #A080BC #C3AFD5 #F5F4F5 #C1CFB4 #9DB389 #799560 #556A44"
+  },
+  {
+   "id": "ppt-33",
+   "name": "玫红与青绿发散（9 级）",
+   "kind": "diverging",
+   "colors": [
+    "#713D63",
+    "#9F568B",
+    "#BB81AB",
+    "#D4AFCA",
+    "#F5F4F5",
+    "#B5CFBC",
+    "#8AB395",
+    "#60946F",
+    "#44694E"
+   ],
+   "source": "由 #C98EB9 派生（冷暖发散，可用于距平/正负值）",
+   "_base": "玫红与青绿发散（9 级）",
+   "colorsText": "#713D63 #9F568B #BB81AB #D4AFCA #F5F4F5 #B5CFBC #8AB395 #60946F #44694E"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "_comment": "hostplg 自测用期刊风格 fixture（renderer 的 py/scifig/presets.json 就绪后不再使用）。",
+  "presets": [
+    {
+      "id": "general",
+      "labelZh": "通用SCI",
+      "labelEn": "General SCI",
+      "values": {
+        "style.font.family": "Arial",
+        "style.font.sizeAxis": 7,
+        "style.font.sizeTitle": 9,
+        "style.font.sizeLabel": 7,
+        "style.lineWidth": 1,
+        "legend.fontSize": 8,
+        "figure.widthMm": 180,
+        "figure.heightMm": 120,
+        "figure.dpi": 300
+      }
+    },
+    {
+      "id": "nature",
+      "labelZh": "Nature",
+      "labelEn": "Nature",
+      "values": {
+        "style.font.family": "Arial",
+        "style.font.sizeAxis": 6,
+        "style.font.sizeTitle": 8,
+        "style.font.sizeLabel": 6,
+        "style.lineWidth": 0.75,
+        "legend.fontSize": 6.5,
+        "figure.widthMm": 89,
+        "figure.heightMm": 70,
+        "figure.dpi": 600
+      }
+    },
+    {
+      "id": "science",
+      "labelZh": "Science",
+      "labelEn": "Science",
+      "values": {
+        "style.font.family": "Arial",
+        "style.font.sizeAxis": 6,
+        "style.font.sizeTitle": 8,
+        "style.font.sizeLabel": 6,
+        "style.lineWidth": 0.75,
+        "legend.fontSize": 6,
+        "figure.widthMm": 89,
+        "figure.heightMm": 65,
+        "figure.dpi": 600
+      }
+    },
+    {
+      "id": "elsevier",
+      "labelZh": "Elsevier",
+      "labelEn": "Elsevier",
+      "values": {
+        "style.font.family": "Times New Roman",
+        "style.font.sizeAxis": 7,
+        "style.font.sizeTitle": 10,
+        "style.font.sizeLabel": 7,
+        "style.lineWidth": 1,
+        "legend.fontSize": 8,
+        "figure.widthMm": 180,
+        "figure.heightMm": 120,
+        "figure.dpi": 300
+      }
+    }
+  ]
+}

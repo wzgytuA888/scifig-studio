@@ -1,0 +1,10 @@
+{
+  "kind": "bar",
+  "title": "三大区域土地利用结构",
+  "figure": { "widthMm": 89, "heightMm": 70, "dpi": 300 },
+  "style": { "preset": "sci" },
+  "data": { "source": "bar_grouped.csv", "group": "土地利用类型" },
+  "axes": { "xlabel": "土地利用类型", "ylabel": "面积占比 (%)" },
+  "bar": { "mode": "group", "orientation": "vertical", "cmap": "Set2" },
+  "legend": { "position": "auto", "fontSize": 7 }
+}

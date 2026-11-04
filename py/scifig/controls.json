@@ -1,0 +1,2728 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "id": "figure",
+      "labelZh": "画幅输出",
+      "labelEn": "Figure",
+      "order": 10,
+      "items": [
+        {
+          "path": "figure.widthMm",
+          "type": "number",
+          "labelZh": "图幅宽度",
+          "labelEn": "Figure width",
+          "level": "basic",
+          "default": 180.0,
+          "min": 40,
+          "max": 400,
+          "step": 1,
+          "unit": "mm",
+          "aliases": [
+            "宽度",
+            "图宽",
+            "画幅宽度",
+            "width"
+          ],
+          "help": "单栏期刊常用 89mm，双栏 180mm"
+        },
+        {
+          "path": "figure.heightMm",
+          "type": "number",
+          "labelZh": "图幅高度",
+          "labelEn": "Figure height",
+          "level": "basic",
+          "default": 120.0,
+          "min": 30,
+          "max": 400,
+          "step": 1,
+          "unit": "mm",
+          "aliases": [
+            "高度",
+            "图高",
+            "画幅高度",
+            "height"
+          ]
+        },
+        {
+          "path": "figure.dpi",
+          "type": "number",
+          "labelZh": "输出分辨率",
+          "labelEn": "DPI",
+          "level": "basic",
+          "default": 300,
+          "min": 72,
+          "max": 1200,
+          "step": 1,
+          "unit": "dpi",
+          "aliases": [
+            "分辨率",
+            "dpi",
+            "清晰度"
+          ],
+          "help": "SCI 印前一般 300 或 600 dpi"
+        }
+      ],
+      "appliesTo": "all"
+    },
+    {
+      "id": "text",
+      "labelZh": "标题与标注",
+      "labelEn": "Titles",
+      "order": 20,
+      "items": [
+        {
+          "path": "title",
+          "type": "text",
+          "labelZh": "图标题",
+          "labelEn": "Title",
+          "level": "basic",
+          "default": "",
+          "aliases": [
+            "标题",
+            "图名",
+            "title",
+            "大标题"
+          ],
+          "help": "总标题；合成图会居中显示"
+        },
+        {
+          "path": "text.note",
+          "type": "text",
+          "labelZh": "数据来源脚注",
+          "labelEn": "Data note",
+          "level": "advanced",
+          "default": "",
+          "aliases": [
+            "脚注",
+            "数据来源",
+            "注记",
+            "note",
+            "source"
+          ]
+        }
+      ],
+      "appliesTo": "all"
+    },
+    {
+      "id": "style",
+      "labelZh": "期刊风格",
+      "labelEn": "Journal preset",
+      "order": 30,
+      "items": [
+        {
+          "path": "style.preset",
+          "type": "enum",
+          "labelZh": "期刊风格",
+          "labelEn": "Journal preset",
+          "level": "basic",
+          "default": "sci",
+          "options": [
+            "sci",
+            "nature",
+            "science",
+            "elsevier",
+            "ieee",
+            "geography-cn",
+            "remote-sensing-cn"
+          ],
+          "optionLabels": {
+            "sci": "通用 SCI",
+            "nature": "Nature",
+            "science": "Science",
+            "elsevier": "Elsevier",
+            "ieee": "IEEE",
+            "geography-cn": "地理学报",
+            "remote-sensing-cn": "遥感学报"
+          },
+          "aliases": [
+            "风格",
+            "期刊",
+            "preset",
+            "期刊风格",
+            "模板"
+          ],
+          "help": "切换风格统一字体/字号/线宽（用户改过的项不会被覆盖）"
+        }
+      ],
+      "appliesTo": "all"
+    },
+    {
+      "id": "font",
+      "labelZh": "字体字号",
+      "labelEn": "Fonts",
+      "order": 32,
+      "items": [
+        {
+          "path": "style.font.family",
+          "type": "enum",
+          "labelZh": "西文字体",
+          "labelEn": "Latin font",
+          "level": "basic",
+          "default": "Arial",
+          "options": [
+            "Arial",
+            "Times New Roman",
+            "Helvetica",
+            "SimSun",
+            "SimHei",
+            "Microsoft YaHei"
+          ],
+          "optionLabels": {
+            "Arial": "Arial（无衬线）",
+            "Times New Roman": "Times New Roman（衬线）",
+            "Helvetica": "Helvetica",
+            "SimSun": "宋体",
+            "SimHei": "黑体",
+            "Microsoft YaHei": "微软雅黑"
+          },
+          "aliases": [
+            "字体",
+            "西文字体",
+            "font",
+            "family"
+          ],
+          "help": "中文会自动回退到下面的中文字体"
+        },
+        {
+          "path": "style.font.cjkFallback",
+          "type": "enum",
+          "labelZh": "中文字体回退",
+          "labelEn": "CJK fallback",
+          "level": "advanced",
+          "default": "SimSun",
+          "options": [
+            "auto",
+            "SimSun",
+            "SimHei",
+            "Microsoft YaHei",
+            "KaiTi",
+            "none"
+          ],
+          "optionLabels": {
+            "auto": "自动选择",
+            "SimSun": "宋体",
+            "SimHei": "黑体",
+            "Microsoft YaHei": "微软雅黑",
+            "KaiTi": "楷体",
+            "none": "不回退"
+          },
+          "aliases": [
+            "中文字体",
+            "汉字字体",
+            "cjk",
+            "中文回退"
+          ]
+        },
+        {
+          "path": "style.font.sizeBase",
+          "type": "number",
+          "labelZh": "基准字号",
+          "labelEn": "Base font size",
+          "level": "basic",
+          "default": 8.0,
+          "min": 5,
+          "max": 16,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "字号",
+            "整体字号",
+            "font size"
+          ],
+          "help": "SCI 正文图一般 6–9pt"
+        },
+        {
+          "path": "style.font.sizeTitle",
+          "type": "number",
+          "labelZh": "标题字号",
+          "labelEn": "Title size",
+          "level": "basic",
+          "default": 10.0,
+          "min": 5,
+          "max": 20,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "标题大小",
+            "标题字号"
+          ]
+        },
+        {
+          "path": "style.font.sizeAxis",
+          "type": "number",
+          "labelZh": "轴标题字号",
+          "labelEn": "Axis label size",
+          "level": "advanced",
+          "default": 8.0,
+          "min": 5,
+          "max": 16,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "轴标签字号",
+            "轴名字号"
+          ]
+        },
+        {
+          "path": "style.font.sizeTick",
+          "type": "number",
+          "labelZh": "刻度字号",
+          "labelEn": "Tick label size",
+          "level": "advanced",
+          "default": 7.0,
+          "min": 4,
+          "max": 14,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "刻度数字",
+            "刻度字号"
+          ]
+        },
+        {
+          "path": "style.font.sizeLegend",
+          "type": "number",
+          "labelZh": "图例字号(默认)",
+          "labelEn": "Legend size",
+          "level": "advanced",
+          "default": 7.0,
+          "min": 4,
+          "max": 14,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "图例字号",
+            "图例字体大小"
+          ]
+        }
+      ],
+      "appliesTo": "all"
+    },
+    {
+      "id": "palette",
+      "labelZh": "配色",
+      "labelEn": "Palette",
+      "order": 33,
+      "items": [
+        {
+          "path": "style.palette",
+          "type": "enum",
+          "labelZh": "分类配色",
+          "labelEn": "Categorical palette",
+          "level": "basic",
+          "default": "ppt-01",
+          "options": [
+            "ppt-01",
+            "ppt-02",
+            "ppt-03",
+            "ppt-04",
+            "ppt-05",
+            "ppt-06",
+            "ppt-07",
+            "ppt-08",
+            "ppt-09",
+            "ppt-10",
+            "ppt-11",
+            "ppt-12",
+            "ppt-13",
+            "ppt-14",
+            "ppt-15",
+            "ppt-16"
+          ],
+          "optionLabels": {
+            "ppt-01": "蓝 · 金 · 橙（6 色）",
+            "ppt-02": "天蓝 · 橙（6 色）",
+            "ppt-03": "玫红 · 蓝紫 · 灰（6 色）",
+            "ppt-04": "金 · 橙 · 红（6 色）",
+            "ppt-05": "金 · 橙 · 玫红（6 色）",
+            "ppt-06": "红 · 青 · 紫（6 色）",
+            "ppt-07": "金 · 红 · 天蓝（6 色）",
+            "ppt-08": "橙 · 红 · 灰（6 色）",
+            "ppt-09": "青绿 · 灰（6 色）",
+            "ppt-10": "玫红 · 紫 · 青（6 色）",
+            "ppt-11": "橙 · 红 · 青绿（6 色）",
+            "ppt-12": "金 · 青绿 · 蓝紫（6 色）",
+            "ppt-13": "金 · 红 · 天蓝（6 色） ②",
+            "ppt-14": "青 · 红 · 玫红（6 色）",
+            "ppt-15": "金 · 橙 · 红（6 色） ②",
+            "ppt-16": "金 · 橙 · 蓝（6 色）"
+          },
+          "aliases": [
+            "配色",
+            "颜色",
+            "色系",
+            "配色方案",
+            "换一套颜色",
+            "分类配色",
+            "palette"
+          ],
+          "help": "PPT 提取的 18 套分类配色，用于折线/柱/散点/点符号/分级设色"
+        },
+        {
+          "path": "style.paletteSequential",
+          "type": "enum",
+          "labelZh": "顺序配色",
+          "labelEn": "Sequential palette",
+          "level": "basic",
+          "default": "ppt-17",
+          "options": [
+            "ppt-17",
+            "ppt-19",
+            "ppt-21",
+            "ppt-23",
+            "ppt-25",
+            "ppt-27",
+            "ppt-29",
+            "ppt-31"
+          ],
+          "optionLabels": {
+            "ppt-17": "蓝渐变（7 级）",
+            "ppt-19": "金渐变（7 级）",
+            "ppt-21": "橙渐变（7 级）",
+            "ppt-23": "玫红渐变（7 级）",
+            "ppt-25": "蓝紫渐变（7 级）",
+            "ppt-27": "青渐变（7 级）",
+            "ppt-29": "青绿渐变（7 级）",
+            "ppt-31": "紫渐变（7 级）"
+          },
+          "aliases": [
+            "顺序配色",
+            "连续配色",
+            "色带配色",
+            "sequential palette"
+          ],
+          "help": "用于连续填色、热力图、分级设色与色带默认"
+        },
+        {
+          "path": "style.paletteDiverging",
+          "type": "enum",
+          "labelZh": "发散配色",
+          "labelEn": "Diverging palette",
+          "level": "advanced",
+          "default": "ppt-18",
+          "options": [
+            "ppt-18",
+            "ppt-20",
+            "ppt-22",
+            "ppt-24",
+            "ppt-26",
+            "ppt-28",
+            "ppt-30",
+            "ppt-32",
+            "ppt-33"
+          ],
+          "optionLabels": {
+            "ppt-18": "蓝与橙发散（9 级）",
+            "ppt-20": "金与蓝发散（9 级）",
+            "ppt-22": "橙与蓝发散（9 级）",
+            "ppt-24": "玫红与青发散（9 级）",
+            "ppt-26": "蓝紫与黄绿发散（9 级）",
+            "ppt-28": "青与玫红发散（9 级）",
+            "ppt-30": "青绿与品红发散（9 级）",
+            "ppt-32": "紫与绿发散（9 级）",
+            "ppt-33": "玫红与青绿发散（9 级）"
+          },
+          "aliases": [
+            "发散配色",
+            "正负配色",
+            "diverging palette"
+          ],
+          "help": "用于正负值/距平/以 0 为中心的热力图"
+        }
+      ],
+      "appliesTo": "all"
+    },
+    {
+      "id": "line",
+      "labelZh": "线宽与填充",
+      "labelEn": "Lines",
+      "order": 34,
+      "items": [
+        {
+          "path": "style.line.width",
+          "type": "number",
+          "labelZh": "线宽",
+          "labelEn": "Line width",
+          "level": "basic",
+          "default": 1.2,
+          "min": 0.2,
+          "max": 5,
+          "step": 0.1,
+          "unit": "pt",
+          "aliases": [
+            "线宽",
+            "线条粗细",
+            "linewidth"
+          ]
+        },
+        {
+          "path": "style.line.marker",
+          "type": "enum",
+          "labelZh": "数据点标记",
+          "labelEn": "Marker",
+          "level": "advanced",
+          "default": "none",
+          "options": [
+            "none",
+            "o",
+            "s",
+            "^",
+            "D",
+            "v",
+            "P",
+            "*"
+          ],
+          "optionLabels": {
+            "none": "无",
+            "o": "圆点",
+            "s": "方块",
+            "^": "上三角",
+            "D": "菱形",
+            "v": "下三角",
+            "P": "加号",
+            "*": "星号"
+          },
+          "aliases": [
+            "标记",
+            "点型",
+            "marker",
+            "符号"
+          ]
+        },
+        {
+          "path": "style.line.markerSize",
+          "type": "number",
+          "labelZh": "标记大小",
+          "labelEn": "Marker size",
+          "level": "advanced",
+          "default": 3.5,
+          "min": 1,
+          "max": 15,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "标记大小",
+            "点大小"
+          ]
+        },
+        {
+          "path": "style.bar.width",
+          "type": "number",
+          "labelZh": "柱宽比例",
+          "labelEn": "Bar width",
+          "level": "advanced",
+          "default": 0.7,
+          "min": 0.1,
+          "max": 1,
+          "step": 0.05,
+          "aliases": [
+            "柱宽",
+            "柱子宽度",
+            "bar width"
+          ]
+        }
+      ],
+      "appliesTo": "chart"
+    },
+    {
+      "id": "axisStyle",
+      "labelZh": "轴与边框",
+      "labelEn": "Axes frame",
+      "order": 36,
+      "items": [
+        {
+          "path": "style.axis.lineWidth",
+          "type": "number",
+          "labelZh": "轴框线宽",
+          "labelEn": "Spine width",
+          "level": "advanced",
+          "default": 0.8,
+          "min": 0.2,
+          "max": 3,
+          "step": 0.1,
+          "unit": "pt",
+          "aliases": [
+            "轴框线宽",
+            "边框粗细"
+          ]
+        },
+        {
+          "path": "style.axis.tickWidth",
+          "type": "number",
+          "labelZh": "刻度线宽",
+          "labelEn": "Tick width",
+          "level": "advanced",
+          "default": 0.8,
+          "min": 0.2,
+          "max": 3,
+          "step": 0.1,
+          "unit": "pt",
+          "aliases": [
+            "刻度线宽",
+            "刻度粗细"
+          ]
+        },
+        {
+          "path": "style.axis.tickLength",
+          "type": "number",
+          "labelZh": "刻度长度",
+          "labelEn": "Tick length",
+          "level": "advanced",
+          "default": 3.0,
+          "min": 1,
+          "max": 12,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "刻度长度",
+            "刻度线长度"
+          ]
+        },
+        {
+          "path": "style.axis.tickDirection",
+          "type": "enum",
+          "labelZh": "刻度朝向",
+          "labelEn": "Tick direction",
+          "level": "basic",
+          "default": "in",
+          "options": [
+            "in",
+            "out",
+            "inout"
+          ],
+          "optionLabels": {
+            "in": "朝内",
+            "out": "朝外",
+            "inout": "双向"
+          },
+          "aliases": [
+            "刻度朝内",
+            "刻度方向",
+            "tick direction"
+          ],
+          "help": "SCI 制图通常朝内"
+        },
+        {
+          "path": "style.axis.showTop",
+          "type": "bool",
+          "labelZh": "显示上边框",
+          "labelEn": "Show top spine",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "上边框",
+            "顶部边框",
+            "top spine"
+          ]
+        },
+        {
+          "path": "style.axis.showRight",
+          "type": "bool",
+          "labelZh": "显示右边框",
+          "labelEn": "Show right spine",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "右边框",
+            "右侧边框",
+            "right spine"
+          ]
+        },
+        {
+          "path": "style.axis.grid",
+          "type": "bool",
+          "labelZh": "显示网格",
+          "labelEn": "Show grid",
+          "level": "basic",
+          "default": false,
+          "aliases": [
+            "网格",
+            "网格线",
+            "grid"
+          ],
+          "help": "折线/散点图可开启；地图用经纬网"
+        }
+      ],
+      "appliesTo": "chart"
+    },
+    {
+      "id": "mapProjection",
+      "labelZh": "地图投影",
+      "labelEn": "Map projection",
+      "order": 40,
+      "items": [
+        {
+          "path": "map.projection",
+          "type": "enum",
+          "labelZh": "投影方式",
+          "labelEn": "Projection",
+          "level": "basic",
+          "default": "lambert",
+          "options": [
+            "platecarree",
+            "mercator",
+            "miller",
+            "lambert",
+            "albers",
+            "robinson",
+            "mollweide",
+            "equalearth",
+            "orthographic",
+            "azimuthal",
+            "northpolarstereo"
+          ],
+          "optionLabels": {
+            "platecarree": "等经纬度",
+            "mercator": "墨卡托",
+            "miller": "米勒",
+            "lambert": "兰伯特等角圆锥",
+            "albers": "阿尔伯斯等积圆锥",
+            "robinson": "罗宾逊",
+            "mollweide": "摩尔威特",
+            "equalearth": "等地球",
+            "orthographic": "正射",
+            "azimuthal": "方位等距",
+            "northpolarstereo": "北极立体"
+          },
+          "aliases": [
+            "投影",
+            "投影方式",
+            "projection",
+            "坐标系"
+          ],
+          "help": "中国区域图推荐兰伯特或阿尔伯斯；世界图用罗宾逊/等地球"
+        },
+        {
+          "path": "map.extentPreset",
+          "type": "enum",
+          "labelZh": "范围预设",
+          "labelEn": "Extent preset",
+          "level": "basic",
+          "default": "china_neighbors",
+          "options": [
+            "china",
+            "china_neighbors",
+            "china_full",
+            "xinjiang",
+            "central_asia",
+            "asia",
+            "world",
+            "custom"
+          ],
+          "optionLabels": {
+            "china": "中国",
+            "china_neighbors": "中国及周边",
+            "china_full": "中国全境(含南海)",
+            "xinjiang": "新疆",
+            "central_asia": "中亚",
+            "asia": "亚洲",
+            "world": "全球",
+            "custom": "自定义经纬度"
+          },
+          "aliases": [
+            "范围",
+            "图幅范围",
+            "研究区范围",
+            "extent",
+            "显示范围"
+          ],
+          "help": "非 custom 时以预设为准，四个 extent 数值被忽略；custom 才用下面四项"
+        },
+        {
+          "path": "map.extentLonMin",
+          "type": "number",
+          "labelZh": "最小经度",
+          "labelEn": "Lon min",
+          "level": "advanced",
+          "default": 72.0,
+          "min": -180,
+          "max": 360,
+          "step": 0.5,
+          "unit": "°",
+          "aliases": [
+            "最小经度",
+            "最小经",
+            "extentLonMin"
+          ],
+          "help": "仅 map.extentPreset=custom 时生效",
+          "visibleWhen": {
+            "path": "map.extentPreset",
+            "in": [
+              "custom"
+            ]
+          }
+        },
+        {
+          "path": "map.extentLonMax",
+          "type": "number",
+          "labelZh": "最大经度",
+          "labelEn": "Lon max",
+          "level": "advanced",
+          "default": 137.0,
+          "min": -180,
+          "max": 360,
+          "step": 0.5,
+          "unit": "°",
+          "aliases": [
+            "最大经度",
+            "最大经",
+            "extentLonMax"
+          ],
+          "help": "仅 map.extentPreset=custom 时生效",
+          "visibleWhen": {
+            "path": "map.extentPreset",
+            "in": [
+              "custom"
+            ]
+          }
+        },
+        {
+          "path": "map.extentLatMin",
+          "type": "number",
+          "labelZh": "最小纬度",
+          "labelEn": "Lat min",
+          "level": "advanced",
+          "default": 16.0,
+          "min": -90,
+          "max": 90,
+          "step": 0.5,
+          "unit": "°",
+          "aliases": [
+            "最小纬度",
+            "最小纬",
+            "extentLatMin"
+          ],
+          "help": "仅 map.extentPreset=custom 时生效",
+          "visibleWhen": {
+            "path": "map.extentPreset",
+            "in": [
+              "custom"
+            ]
+          }
+        },
+        {
+          "path": "map.extentLatMax",
+          "type": "number",
+          "labelZh": "最大纬度",
+          "labelEn": "Lat max",
+          "level": "advanced",
+          "default": 55.0,
+          "min": -90,
+          "max": 90,
+          "step": 0.5,
+          "unit": "°",
+          "aliases": [
+            "最大纬度",
+            "最大纬",
+            "extentLatMax"
+          ],
+          "help": "仅 map.extentPreset=custom 时生效",
+          "visibleWhen": {
+            "path": "map.extentPreset",
+            "in": [
+              "custom"
+            ]
+          }
+        },
+        {
+          "path": "map.centralLongitude",
+          "type": "number",
+          "labelZh": "中央经线",
+          "labelEn": "Central longitude",
+          "level": "advanced",
+          "default": 105.0,
+          "min": -180,
+          "max": 360,
+          "step": 1,
+          "unit": "°",
+          "aliases": [
+            "中央经线",
+            "中心经度",
+            "central longitude"
+          ],
+          "help": "圆锥/方位投影会自动贴合研究区中心（偏差 >10° 时）；显式设置接近值则尊重用户输入"
+        },
+        {
+          "path": "map.centralLatitude",
+          "type": "number",
+          "labelZh": "中央纬度",
+          "labelEn": "Central latitude",
+          "level": "advanced",
+          "default": 35.0,
+          "min": -90,
+          "max": 90,
+          "step": 1,
+          "unit": "°",
+          "aliases": [
+            "中央纬度",
+            "中心纬度",
+            "central latitude"
+          ],
+          "help": "Lambert/Albers/正射/方位投影的锥顶/球心纬度；偏离研究区 >5–10° 时自动贴合并 warning"
+        },
+        {
+          "path": "map.standardParallels",
+          "type": "text",
+          "labelZh": "标准纬线",
+          "labelEn": "Standard parallels",
+          "level": "advanced",
+          "default": "25,47",
+          "aliases": [
+            "标准纬线",
+            "双标准纬线",
+            "standard parallels"
+          ],
+          "help": "Lambert/Albers 用，逗号分隔两条标准纬线（如 25,47）；留空或 auto 时按范围自动取值"
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "mapLayers",
+      "labelZh": "地图要素",
+      "labelEn": "Map layers",
+      "order": 44,
+      "items": [
+        {
+          "path": "map.layers.land",
+          "type": "bool",
+          "labelZh": "陆地",
+          "labelEn": "Land",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "陆地",
+            "land"
+          ]
+        },
+        {
+          "path": "map.layers.ocean",
+          "type": "bool",
+          "labelZh": "海洋",
+          "labelEn": "Ocean",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "海洋",
+            "ocean"
+          ]
+        },
+        {
+          "path": "map.layers.lakes",
+          "type": "bool",
+          "labelZh": "湖泊",
+          "labelEn": "Lakes",
+          "level": "advanced",
+          "default": true,
+          "aliases": [
+            "湖泊",
+            "lakes"
+          ]
+        },
+        {
+          "path": "map.layers.rivers",
+          "type": "bool",
+          "labelZh": "河流",
+          "labelEn": "Rivers",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "河流",
+            "rivers"
+          ]
+        },
+        {
+          "path": "map.layers.coastline",
+          "type": "bool",
+          "labelZh": "海岸线",
+          "labelEn": "Coastline",
+          "level": "advanced",
+          "default": true,
+          "aliases": [
+            "海岸线",
+            "coastline"
+          ]
+        },
+        {
+          "path": "map.layers.countryBorders",
+          "type": "bool",
+          "labelZh": "国界线",
+          "labelEn": "Country borders",
+          "level": "advanced",
+          "default": true,
+          "aliases": [
+            "国界线",
+            "countryBorders"
+          ]
+        },
+        {
+          "path": "map.layers.chinaBorder",
+          "type": "bool",
+          "labelZh": "中国国界",
+          "labelEn": "China border",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "中国国界",
+            "chinaBorder"
+          ]
+        },
+        {
+          "path": "map.layers.provinceBorders",
+          "type": "bool",
+          "labelZh": "省界",
+          "labelEn": "Province borders",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "省界",
+            "provinceBorders"
+          ]
+        },
+        {
+          "path": "map.layers.scsInset",
+          "type": "bool",
+          "labelZh": "南海诸岛插图",
+          "labelEn": "South China Sea inset",
+          "level": "basic",
+          "default": false,
+          "aliases": [
+            "南海诸岛插图",
+            "scsInset"
+          ],
+          "help": "仅示意，正式出版请核对标准地图"
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "mapColors",
+      "labelZh": "地图配色",
+      "labelEn": "Map colours",
+      "order": 45,
+      "items": [
+        {
+          "path": "map.colors.land",
+          "type": "color",
+          "labelZh": "陆地填充",
+          "labelEn": "Land fill",
+          "level": "advanced",
+          "default": "#f2efe9",
+          "aliases": [
+            "陆地填充",
+            "land"
+          ]
+        },
+        {
+          "path": "map.colors.ocean",
+          "type": "color",
+          "labelZh": "海洋填充",
+          "labelEn": "Ocean fill",
+          "level": "advanced",
+          "default": "#e6f0f7",
+          "aliases": [
+            "海洋填充",
+            "ocean"
+          ]
+        },
+        {
+          "path": "map.colors.border",
+          "type": "color",
+          "labelZh": "国界颜色",
+          "labelEn": "Border colour",
+          "level": "advanced",
+          "default": "#8c8c8c",
+          "aliases": [
+            "国界颜色",
+            "border"
+          ]
+        },
+        {
+          "path": "map.colors.chinaBorder",
+          "type": "color",
+          "labelZh": "中国国界颜色",
+          "labelEn": "China border colour",
+          "level": "advanced",
+          "default": "#333333",
+          "aliases": [
+            "中国国界颜色",
+            "chinaBorder"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "mapGrid",
+      "labelZh": "经纬网",
+      "labelEn": "Graticule",
+      "order": 46,
+      "items": [
+        {
+          "path": "map.grid.show",
+          "type": "bool",
+          "labelZh": "显示经纬网",
+          "labelEn": "Show graticule",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "经纬网",
+            "格网",
+            "网格线",
+            "graticule"
+          ]
+        },
+        {
+          "path": "map.grid.intervalX",
+          "type": "number",
+          "labelZh": "经度间隔",
+          "labelEn": "Longitude step",
+          "level": "advanced",
+          "default": 0,
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "°",
+          "aliases": [
+            "经度间隔",
+            "经度步长"
+          ],
+          "help": "0 表示按图幅自动计算"
+        },
+        {
+          "path": "map.grid.intervalY",
+          "type": "number",
+          "labelZh": "纬度间隔",
+          "labelEn": "Latitude step",
+          "level": "advanced",
+          "default": 0,
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "°",
+          "aliases": [
+            "纬度间隔",
+            "纬度步长"
+          ],
+          "help": "0 表示按图幅自动计算"
+        },
+        {
+          "path": "map.grid.labelFormat",
+          "type": "enum",
+          "labelZh": "标注格式",
+          "labelEn": "Label format",
+          "level": "basic",
+          "default": "degree",
+          "options": [
+            "degree",
+            "degree_minute",
+            "degree_only",
+            "none"
+          ],
+          "optionLabels": {
+            "degree": "度（75°E）",
+            "degree_minute": "度分（75°30′E）",
+            "degree_only": "纯数字度数",
+            "none": "不标注"
+          },
+          "aliases": [
+            "经纬度格式",
+            "标注格式",
+            "度数格式",
+            "label format"
+          ]
+        },
+        {
+          "path": "map.grid.labelTop",
+          "type": "bool",
+          "labelZh": "上方标注经度",
+          "labelEn": "Top labels",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "上方标注",
+            "上边框标注",
+            "top labels"
+          ]
+        },
+        {
+          "path": "map.grid.labelRight",
+          "type": "bool",
+          "labelZh": "右侧标注纬度",
+          "labelEn": "Right labels",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "右侧标注",
+            "右边框标注",
+            "right labels"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "colorbar",
+      "labelZh": "色带",
+      "labelEn": "Colourbar",
+      "order": 48,
+      "items": [
+        {
+          "path": "map.colorbar.show",
+          "type": "bool",
+          "labelZh": "显示色带",
+          "labelEn": "Show colorbar",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "色带",
+            "图例色带",
+            "colorbar",
+            "色条"
+          ]
+        },
+        {
+          "path": "map.colorbar.label",
+          "type": "text",
+          "labelZh": "色带标题",
+          "labelEn": "Colorbar label",
+          "level": "basic",
+          "default": "",
+          "aliases": [
+            "色带标题",
+            "色带名称",
+            "colorbar label",
+            "单位说明"
+          ],
+          "help": "单位上下标自动排版：dS m-1 / dS m⁻¹ / m2 都会转成上标"
+        },
+        {
+          "path": "map.colorbar.location",
+          "type": "enum",
+          "labelZh": "色带位置",
+          "labelEn": "Colorbar location",
+          "level": "basic",
+          "default": "right",
+          "options": [
+            "right",
+            "bottom",
+            "inside"
+          ],
+          "optionLabels": {
+            "right": "右侧",
+            "bottom": "下方",
+            "inside": "图内"
+          },
+          "aliases": [
+            "色带位置",
+            "色条位置",
+            "colorbar position"
+          ]
+        },
+        {
+          "path": "map.colorbar.cmap",
+          "type": "enum",
+          "labelZh": "配色方案",
+          "labelEn": "Colour map",
+          "level": "basic",
+          "default": "YlOrRd",
+          "options": [
+            "YlOrRd",
+            "YlGnBu",
+            "RdYlBu",
+            "RdBu_r",
+            "Spectral",
+            "viridis",
+            "plasma",
+            "magma",
+            "cividis",
+            "Greys",
+            "Blues",
+            "Greens",
+            "OrRd",
+            "PuBu",
+            "terrain"
+          ],
+          "optionLabels": {
+            "YlOrRd": "黄橙红",
+            "YlGnBu": "黄绿蓝",
+            "RdYlBu": "红黄蓝",
+            "RdBu_r": "红蓝（反向）",
+            "Spectral": "光谱",
+            "viridis": "viridis",
+            "plasma": "plasma",
+            "magma": "magma",
+            "cividis": "cividis",
+            "Greys": "灰阶",
+            "Blues": "蓝色系",
+            "Greens": "绿色系",
+            "OrRd": "橙红",
+            "PuBu": "紫蓝",
+            "terrain": "地形"
+          },
+          "aliases": [
+            "配色",
+            "色带颜色",
+            "cmap",
+            "色系",
+            "colormap"
+          ]
+        },
+        {
+          "path": "map.colorbar.palette",
+          "type": "enum",
+          "labelZh": "色带配色（PPT）",
+          "labelEn": "Colorbar palette",
+          "level": "basic",
+          "default": "",
+          "options": [
+            "",
+            "ppt-17",
+            "ppt-19",
+            "ppt-21",
+            "ppt-23",
+            "ppt-25",
+            "ppt-27",
+            "ppt-29",
+            "ppt-31",
+            "ppt-18",
+            "ppt-20",
+            "ppt-22",
+            "ppt-24",
+            "ppt-26",
+            "ppt-28",
+            "ppt-30",
+            "ppt-32",
+            "ppt-33"
+          ],
+          "optionLabels": {
+            "": "跟随配色（cmap / 顺序色）",
+            "ppt-17": "蓝渐变（7 级）",
+            "ppt-19": "金渐变（7 级）",
+            "ppt-21": "橙渐变（7 级）",
+            "ppt-23": "玫红渐变（7 级）",
+            "ppt-25": "蓝紫渐变（7 级）",
+            "ppt-27": "青渐变（7 级）",
+            "ppt-29": "青绿渐变（7 级）",
+            "ppt-31": "紫渐变（7 级）",
+            "ppt-18": "蓝与橙发散（9 级）",
+            "ppt-20": "金与蓝发散（9 级）",
+            "ppt-22": "橙与蓝发散（9 级）",
+            "ppt-24": "玫红与青发散（9 级）",
+            "ppt-26": "蓝紫与黄绿发散（9 级）",
+            "ppt-28": "青与玫红发散（9 级）",
+            "ppt-30": "青绿与品红发散（9 级）",
+            "ppt-32": "紫与绿发散（9 级）",
+            "ppt-33": "玫红与青绿发散（9 级）"
+          },
+          "aliases": [
+            "色带配色",
+            "色带颜色",
+            "色条配色",
+            "colorbar palette"
+          ],
+          "help": "优先于 cmap；空=按 style.paletteSequential → map.colorbar.cmap 回退"
+        },
+        {
+          "path": "map.colorbar.tickFormat",
+          "type": "enum",
+          "labelZh": "刻度格式",
+          "labelEn": "Tick format",
+          "level": "advanced",
+          "default": "auto",
+          "options": [
+            "auto",
+            "integer",
+            "one_decimal",
+            "two_decimal",
+            "scientific",
+            "percent"
+          ],
+          "optionLabels": {
+            "auto": "自动（按范围统一小数位）",
+            "integer": "整数",
+            "one_decimal": "1 位小数",
+            "two_decimal": "2 位小数",
+            "scientific": "科学计数",
+            "percent": "百分比"
+          },
+          "aliases": [
+            "色带刻度格式",
+            "色带数字格式",
+            "tick format",
+            "色带小数位"
+          ],
+          "help": "auto 会按数值范围统一小数位，避免 0.27/0.472 混排"
+        },
+        {
+          "path": "map.colorbar.extend",
+          "type": "enum",
+          "labelZh": "色带延伸",
+          "labelEn": "Extend",
+          "level": "advanced",
+          "default": "neither",
+          "options": [
+            "neither",
+            "min",
+            "max",
+            "both"
+          ],
+          "optionLabels": {
+            "neither": "不延伸",
+            "min": "低端延伸",
+            "max": "高端延伸",
+            "both": "两端延伸"
+          },
+          "aliases": [
+            "延伸",
+            "超出值",
+            "extend"
+          ]
+        },
+        {
+          "path": "map.colorbar.vmin",
+          "type": "number",
+          "labelZh": "色带最小值",
+          "labelEn": "Colorbar min",
+          "level": "advanced",
+          "default": null,
+          "min": -1000000000000.0,
+          "max": 1000000000000.0,
+          "nullable": true,
+          "aliases": [
+            "最小值",
+            "下限",
+            "vmin"
+          ],
+          "help": "留空自动取数据最小值"
+        },
+        {
+          "path": "map.colorbar.vmax",
+          "type": "number",
+          "labelZh": "色带最大值",
+          "labelEn": "Colorbar max",
+          "level": "advanced",
+          "default": null,
+          "min": -1000000000000.0,
+          "max": 1000000000000.0,
+          "nullable": true,
+          "aliases": [
+            "最大值",
+            "上限",
+            "vmax"
+          ],
+          "help": "留空自动取数据最大值"
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map",
+          "heatmap"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "scaleBar",
+      "labelZh": "比例尺",
+      "labelEn": "Scale bar",
+      "order": 50,
+      "items": [
+        {
+          "path": "map.scaleBar.show",
+          "type": "bool",
+          "labelZh": "显示比例尺",
+          "labelEn": "Show scale bar",
+          "level": "basic",
+          "default": false,
+          "aliases": [
+            "比例尺",
+            "scale bar"
+          ]
+        },
+        {
+          "path": "map.scaleBar.lengthKm",
+          "type": "number",
+          "labelZh": "比例尺长度",
+          "labelEn": "Scale bar length",
+          "level": "basic",
+          "default": 500,
+          "min": 10,
+          "max": 5000,
+          "step": 10,
+          "unit": "km",
+          "aliases": [
+            "比例尺长度",
+            "比例尺距离",
+            "scale length"
+          ]
+        },
+        {
+          "path": "map.scaleBar.position",
+          "type": "enum",
+          "labelZh": "比例尺位置",
+          "labelEn": "Scale bar position",
+          "level": "advanced",
+          "default": "lower left",
+          "options": [
+            "lower left",
+            "lower right",
+            "upper left",
+            "upper right"
+          ],
+          "optionLabels": {
+            "lower left": "左下",
+            "lower right": "右下",
+            "upper left": "左上",
+            "upper right": "右上"
+          },
+          "aliases": [
+            "比例尺位置",
+            "scale bar position"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "northArrow",
+      "labelZh": "指北针",
+      "labelEn": "North arrow",
+      "order": 52,
+      "items": [
+        {
+          "path": "map.northArrow.show",
+          "type": "bool",
+          "labelZh": "显示指北针",
+          "labelEn": "Show north arrow",
+          "level": "basic",
+          "default": false,
+          "aliases": [
+            "指北针",
+            "北箭头",
+            "north arrow"
+          ]
+        },
+        {
+          "path": "map.northArrow.position",
+          "type": "enum",
+          "labelZh": "指北针位置",
+          "labelEn": "North arrow position",
+          "level": "advanced",
+          "default": "upper right",
+          "options": [
+            "upper right",
+            "upper left",
+            "lower right",
+            "lower left"
+          ],
+          "optionLabels": {
+            "upper right": "右上",
+            "upper left": "左上",
+            "lower right": "右下",
+            "lower left": "左下"
+          },
+          "aliases": [
+            "指北针位置",
+            "north arrow position"
+          ]
+        },
+        {
+          "path": "map.northArrow.size",
+          "type": "number",
+          "labelZh": "指北针大小",
+          "labelEn": "North arrow size",
+          "level": "advanced",
+          "default": 0.045,
+          "min": 0.02,
+          "max": 0.2,
+          "step": 0.005,
+          "aliases": [
+            "指北针大小",
+            "北箭头大小"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "mapPoint",
+      "labelZh": "点与标注",
+      "labelEn": "Points & labels",
+      "order": 54,
+      "items": [
+        {
+          "path": "map.point.mode",
+          "type": "enum",
+          "labelZh": "点符号模式",
+          "labelEn": "Point mode",
+          "level": "basic",
+          "default": "auto",
+          "options": [
+            "auto",
+            "fixed",
+            "bubble",
+            "choropleth"
+          ],
+          "optionLabels": {
+            "auto": "自动",
+            "fixed": "单色散点",
+            "bubble": "气泡（按数值）",
+            "choropleth": "按数值着色"
+          },
+          "aliases": [
+            "点符号",
+            "点位符号",
+            "散点模式",
+            "point mode"
+          ]
+        },
+        {
+          "path": "map.point.size",
+          "type": "number",
+          "labelZh": "符号大小",
+          "labelEn": "Point size",
+          "level": "basic",
+          "default": 22.0,
+          "min": 2,
+          "max": 300,
+          "step": 1,
+          "unit": "pt²",
+          "aliases": [
+            "点大小",
+            "符号大小",
+            "point size"
+          ]
+        },
+        {
+          "path": "map.point.color",
+          "type": "color",
+          "labelZh": "符号颜色",
+          "labelEn": "Point colour",
+          "level": "advanced",
+          "default": "#d62728",
+          "aliases": [
+            "点颜色",
+            "符号颜色",
+            "point color"
+          ]
+        },
+        {
+          "path": "map.label.show",
+          "type": "bool",
+          "labelZh": "显示点标注",
+          "labelEn": "Show point labels",
+          "level": "basic",
+          "default": false,
+          "aliases": [
+            "点标注",
+            "显示名称",
+            "label"
+          ]
+        },
+        {
+          "path": "map.label.size",
+          "type": "number",
+          "labelZh": "点标注字号",
+          "labelEn": "Label size",
+          "level": "advanced",
+          "default": 6.0,
+          "min": 4,
+          "max": 14,
+          "step": 0.5,
+          "unit": "pt",
+          "aliases": [
+            "标注字号",
+            "点字号"
+          ]
+        },
+        {
+          "path": "map.choropleth.classes",
+          "type": "number",
+          "labelZh": "分级数量",
+          "labelEn": "Class count",
+          "level": "advanced",
+          "default": 5,
+          "min": 2,
+          "max": 9,
+          "step": 1,
+          "unit": "级",
+          "aliases": [
+            "分级数",
+            "分级数量",
+            "classes"
+          ]
+        },
+        {
+          "path": "map.choropleth.palette",
+          "type": "enum",
+          "labelZh": "分级设色配色（PPT）",
+          "labelEn": "Choropleth palette",
+          "level": "advanced",
+          "default": "",
+          "options": [
+            "",
+            "ppt-17",
+            "ppt-19",
+            "ppt-21",
+            "ppt-23",
+            "ppt-25",
+            "ppt-27",
+            "ppt-29",
+            "ppt-31",
+            "ppt-18",
+            "ppt-20",
+            "ppt-22",
+            "ppt-24",
+            "ppt-26",
+            "ppt-28",
+            "ppt-30",
+            "ppt-32",
+            "ppt-33"
+          ],
+          "optionLabels": {
+            "": "跟随顺序配色（style.paletteSequential）",
+            "ppt-17": "蓝渐变（7 级）",
+            "ppt-19": "金渐变（7 级）",
+            "ppt-21": "橙渐变（7 级）",
+            "ppt-23": "玫红渐变（7 级）",
+            "ppt-25": "蓝紫渐变（7 级）",
+            "ppt-27": "青渐变（7 级）",
+            "ppt-29": "青绿渐变（7 级）",
+            "ppt-31": "紫渐变（7 级）",
+            "ppt-18": "蓝与橙发散（9 级）",
+            "ppt-20": "金与蓝发散（9 级）",
+            "ppt-22": "橙与蓝发散（9 级）",
+            "ppt-24": "玫红与青发散（9 级）",
+            "ppt-26": "蓝紫与黄绿发散（9 级）",
+            "ppt-28": "青与玫红发散（9 级）",
+            "ppt-30": "青绿与品红发散（9 级）",
+            "ppt-32": "紫与绿发散（9 级）",
+            "ppt-33": "玫红与青绿发散（9 级）"
+          },
+          "aliases": [
+            "分级配色",
+            "分级设色配色",
+            "choropleth palette"
+          ],
+          "help": "优先于 style.paletteSequential；空=跟随顺序配色"
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "map"
+        ]
+      },
+      "appliesTo": "map"
+    },
+    {
+      "id": "legend",
+      "labelZh": "图例",
+      "labelEn": "Legend",
+      "order": 60,
+      "items": [
+        {
+          "path": "legend.show",
+          "type": "bool",
+          "labelZh": "显示图例",
+          "labelEn": "Show legend",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "图例",
+            "显示图例",
+            "legend"
+          ]
+        },
+        {
+          "path": "legend.position",
+          "type": "enum",
+          "labelZh": "图例位置",
+          "labelEn": "Legend position",
+          "level": "basic",
+          "default": "auto",
+          "options": [
+            "auto",
+            "upper right",
+            "upper left",
+            "lower right",
+            "lower left",
+            "center",
+            "outside right",
+            "below"
+          ],
+          "optionLabels": {
+            "auto": "自动避让",
+            "upper right": "右上",
+            "upper left": "左上",
+            "lower right": "右下",
+            "lower left": "左下",
+            "center": "居中",
+            "outside right": "图外右侧",
+            "below": "图下方"
+          },
+          "aliases": [
+            "图例位置",
+            "图例放哪",
+            "图例放到",
+            "legend position"
+          ],
+          "help": "auto 会按数据像素遮挡打分挑选遮挡最少的位置"
+        },
+        {
+          "path": "legend.fontSize",
+          "type": "number",
+          "labelZh": "图例字号",
+          "labelEn": "Legend font size",
+          "level": "basic",
+          "default": null,
+          "min": 4,
+          "max": 20,
+          "step": 0.5,
+          "unit": "pt",
+          "nullable": true,
+          "aliases": [
+            "图例字号",
+            "图例字体大小"
+          ],
+          "help": "留空跟随 style.font.sizeLegend（期刊风格切换会同步）"
+        },
+        {
+          "path": "legend.ncol",
+          "type": "number",
+          "labelZh": "图例列数",
+          "labelEn": "Legend columns",
+          "level": "advanced",
+          "default": 1,
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "integer": true,
+          "aliases": [
+            "图例列数",
+            "图例横排",
+            "ncol"
+          ]
+        },
+        {
+          "path": "legend.frame",
+          "type": "bool",
+          "labelZh": "图例边框",
+          "labelEn": "Legend frame",
+          "level": "advanced",
+          "default": true,
+          "aliases": [
+            "图例边框",
+            "图例框",
+            "legend frame"
+          ]
+        },
+        {
+          "path": "legend.title",
+          "type": "text",
+          "labelZh": "图例标题",
+          "labelEn": "Legend title",
+          "level": "advanced",
+          "default": "",
+          "aliases": [
+            "图例标题",
+            "图例名称",
+            "legend title"
+          ]
+        }
+      ],
+      "appliesTo": "all"
+    },
+    {
+      "id": "axes",
+      "labelZh": "轴设置",
+      "labelEn": "Axes",
+      "order": 70,
+      "items": [
+        {
+          "path": "axes.xlabel",
+          "type": "text",
+          "labelZh": "X 轴标题",
+          "labelEn": "X label",
+          "level": "basic",
+          "default": "",
+          "aliases": [
+            "x 轴",
+            "横轴标题",
+            "xlabel",
+            "横轴"
+          ]
+        },
+        {
+          "path": "axes.ylabel",
+          "type": "text",
+          "labelZh": "Y 轴标题",
+          "labelEn": "Y label",
+          "level": "basic",
+          "default": "",
+          "aliases": [
+            "y 轴",
+            "纵轴标题",
+            "ylabel",
+            "纵轴"
+          ]
+        },
+        {
+          "path": "axes.xScale",
+          "type": "enum",
+          "labelZh": "X 轴尺度",
+          "labelEn": "X scale",
+          "level": "advanced",
+          "default": "linear",
+          "options": [
+            "linear",
+            "log"
+          ],
+          "optionLabels": {
+            "linear": "线性",
+            "log": "对数"
+          },
+          "aliases": [
+            "x 轴对数",
+            "横轴对数",
+            "xscale"
+          ]
+        },
+        {
+          "path": "axes.yScale",
+          "type": "enum",
+          "labelZh": "Y 轴尺度",
+          "labelEn": "Y scale",
+          "level": "advanced",
+          "default": "linear",
+          "options": [
+            "linear",
+            "log"
+          ],
+          "optionLabels": {
+            "linear": "线性",
+            "log": "对数"
+          },
+          "aliases": [
+            "y 轴对数",
+            "纵轴对数",
+            "yscale"
+          ]
+        },
+        {
+          "path": "axes.xMin",
+          "type": "number",
+          "labelZh": "X 轴最小值",
+          "labelEn": "X min",
+          "level": "advanced",
+          "default": null,
+          "min": -1000000000000.0,
+          "max": 1000000000000.0,
+          "nullable": true,
+          "aliases": [
+            "X 轴最小值",
+            "xMin"
+          ],
+          "help": "留空自动"
+        },
+        {
+          "path": "axes.xMax",
+          "type": "number",
+          "labelZh": "X 轴最大值",
+          "labelEn": "X max",
+          "level": "advanced",
+          "default": null,
+          "min": -1000000000000.0,
+          "max": 1000000000000.0,
+          "nullable": true,
+          "aliases": [
+            "X 轴最大值",
+            "xMax"
+          ],
+          "help": "留空自动"
+        },
+        {
+          "path": "axes.yMin",
+          "type": "number",
+          "labelZh": "Y 轴最小值",
+          "labelEn": "Y min",
+          "level": "advanced",
+          "default": null,
+          "min": -1000000000000.0,
+          "max": 1000000000000.0,
+          "nullable": true,
+          "aliases": [
+            "Y 轴最小值",
+            "yMin"
+          ],
+          "help": "留空自动"
+        },
+        {
+          "path": "axes.yMax",
+          "type": "number",
+          "labelZh": "Y 轴最大值",
+          "labelEn": "Y max",
+          "level": "advanced",
+          "default": null,
+          "min": -1000000000000.0,
+          "max": 1000000000000.0,
+          "nullable": true,
+          "aliases": [
+            "Y 轴最大值",
+            "yMax"
+          ],
+          "help": "留空自动"
+        },
+        {
+          "path": "axes.categoricalRotation",
+          "type": "enum",
+          "labelZh": "类目标签旋转",
+          "labelEn": "Category label rotation",
+          "level": "advanced",
+          "default": "auto",
+          "options": [
+            "auto",
+            "0",
+            "30",
+            "45",
+            "90"
+          ],
+          "optionLabels": {
+            "auto": "自动（重叠时依次旋转）",
+            "0": "水平",
+            "30": "30°",
+            "45": "45°",
+            "90": "垂直"
+          },
+          "aliases": [
+            "类目标签旋转",
+            "标签旋转",
+            "类目旋转",
+            "category rotation"
+          ],
+          "help": "auto：相邻标签重叠时自动 30°→45°→缩字号→缩写，仍重叠则进 warnings"
+        }
+      ],
+      "appliesTo": "chart"
+    },
+    {
+      "id": "lineChart",
+      "labelZh": "折线图",
+      "labelEn": "Line chart",
+      "order": 76,
+      "items": [
+        {
+          "path": "line.cmap",
+          "type": "enum",
+          "labelZh": "多系列配色",
+          "labelEn": "Series colours",
+          "level": "basic",
+          "default": "tab10",
+          "options": [
+            "tab10",
+            "tab20",
+            "Set1",
+            "Set2",
+            "Set3",
+            "Paired",
+            "Dark2",
+            "viridis",
+            "plasma",
+            "Spectral"
+          ],
+          "optionLabels": {
+            "tab10": "tab10",
+            "tab20": "tab20",
+            "Set1": "Set1",
+            "Set2": "Set2",
+            "Set3": "Set3",
+            "Paired": "Paired",
+            "Dark2": "Dark2",
+            "viridis": "viridis",
+            "plasma": "plasma",
+            "Spectral": "Spectral"
+          },
+          "aliases": [
+            "多系列配色",
+            "折线配色",
+            "line cmap"
+          ]
+        },
+        {
+          "path": "line.dualAxis",
+          "type": "bool",
+          "labelZh": "启用双 Y 轴",
+          "labelEn": "Dual axis",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "双轴",
+            "双 y 轴",
+            "次坐标轴",
+            "dual axis"
+          ]
+        },
+        {
+          "path": "line.y2",
+          "type": "text",
+          "labelZh": "右轴数据列",
+          "labelEn": "Right axis column",
+          "level": "advanced",
+          "default": "",
+          "aliases": [
+            "右轴数据",
+            "次坐标轴列",
+            "y2"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "line"
+        ]
+      },
+      "appliesTo": "chart"
+    },
+    {
+      "id": "barChart",
+      "labelZh": "柱状图",
+      "labelEn": "Bar chart",
+      "order": 78,
+      "items": [
+        {
+          "path": "bar.mode",
+          "type": "enum",
+          "labelZh": "柱状模式",
+          "labelEn": "Bar mode",
+          "level": "basic",
+          "default": "group",
+          "options": [
+            "group",
+            "stack",
+            "percent"
+          ],
+          "optionLabels": {
+            "group": "分组",
+            "stack": "堆叠",
+            "percent": "百分比堆叠"
+          },
+          "aliases": [
+            "分组柱",
+            "堆叠柱",
+            "柱状模式",
+            "bar mode"
+          ]
+        },
+        {
+          "path": "bar.orientation",
+          "type": "enum",
+          "labelZh": "方向",
+          "labelEn": "Orientation",
+          "level": "basic",
+          "default": "vertical",
+          "options": [
+            "vertical",
+            "horizontal"
+          ],
+          "optionLabels": {
+            "vertical": "竖直",
+            "horizontal": "水平"
+          },
+          "aliases": [
+            "横向柱",
+            "水平柱",
+            "条形图",
+            "orientation"
+          ]
+        },
+        {
+          "path": "bar.cmap",
+          "type": "enum",
+          "labelZh": "柱配色",
+          "labelEn": "Bar colours",
+          "level": "advanced",
+          "default": "tab10",
+          "options": [
+            "tab10",
+            "Set1",
+            "Set2",
+            "Set3",
+            "Paired",
+            "Dark2",
+            "viridis",
+            "Blues"
+          ],
+          "optionLabels": {
+            "tab10": "tab10",
+            "Set1": "Set1",
+            "Set2": "Set2",
+            "Set3": "Set3",
+            "Paired": "Paired",
+            "Dark2": "Dark2",
+            "viridis": "viridis",
+            "Blues": "Blues"
+          },
+          "aliases": [
+            "柱配色",
+            "柱子颜色",
+            "bar cmap"
+          ]
+        },
+        {
+          "path": "bar.valueLabels",
+          "type": "bool",
+          "labelZh": "显示数值标签",
+          "labelEn": "Value labels",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "数值标签",
+            "显示数值",
+            "value labels"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "bar"
+        ]
+      },
+      "appliesTo": "chart"
+    },
+    {
+      "id": "scatterChart",
+      "labelZh": "散点图",
+      "labelEn": "Scatter",
+      "order": 80,
+      "items": [
+        {
+          "path": "scatter.fit",
+          "type": "enum",
+          "labelZh": "拟合线",
+          "labelEn": "Fit line",
+          "level": "basic",
+          "default": "none",
+          "options": [
+            "none",
+            "linear",
+            "poly2"
+          ],
+          "optionLabels": {
+            "none": "不拟合",
+            "linear": "线性拟合",
+            "poly2": "二次拟合"
+          },
+          "aliases": [
+            "拟合线",
+            "趋势线",
+            "回归线",
+            "fit"
+          ]
+        },
+        {
+          "path": "scatter.showEquation",
+          "type": "bool",
+          "labelZh": "显示拟合方程",
+          "labelEn": "Show equation",
+          "level": "advanced",
+          "default": true,
+          "aliases": [
+            "拟合方程",
+            "显示 R2",
+            "方程"
+          ]
+        },
+        {
+          "path": "scatter.colorBy",
+          "type": "text",
+          "labelZh": "着色分组列",
+          "labelEn": "Colour by column",
+          "level": "advanced",
+          "default": "",
+          "aliases": [
+            "按列着色",
+            "分组列",
+            "colorBy"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "scatter"
+        ]
+      },
+      "appliesTo": "chart"
+    },
+    {
+      "id": "heatmapChart",
+      "labelZh": "热力图",
+      "labelEn": "Heatmap",
+      "order": 82,
+      "items": [
+        {
+          "path": "heatmap.cmap",
+          "type": "enum",
+          "labelZh": "热力配色",
+          "labelEn": "Heatmap cmap",
+          "level": "basic",
+          "default": "RdBu_r",
+          "options": [
+            "RdBu_r",
+            "RdYlBu",
+            "viridis",
+            "plasma",
+            "magma",
+            "cividis",
+            "YlOrRd",
+            "Spectral",
+            "Greys"
+          ],
+          "optionLabels": {
+            "RdBu_r": "红蓝（反向）",
+            "RdYlBu": "红黄蓝",
+            "viridis": "viridis",
+            "plasma": "plasma",
+            "magma": "magma",
+            "cividis": "cividis",
+            "YlOrRd": "黄橙红",
+            "Spectral": "光谱",
+            "Greys": "灰阶"
+          },
+          "aliases": [
+            "热力配色",
+            "矩阵配色",
+            "heatmap cmap"
+          ]
+        },
+        {
+          "path": "heatmap.annotate",
+          "type": "bool",
+          "labelZh": "显示单元格数值",
+          "labelEn": "Annotate cells",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "单元格数值",
+            "数值标注",
+            "annotate"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "heatmap"
+        ]
+      },
+      "appliesTo": "chart"
+    },
+    {
+      "id": "boxChart",
+      "labelZh": "箱线图",
+      "labelEn": "Box plot",
+      "order": 84,
+      "items": [
+        {
+          "path": "box.showOutliers",
+          "type": "bool",
+          "labelZh": "显示离群点",
+          "labelEn": "Show outliers",
+          "level": "advanced",
+          "default": true,
+          "aliases": [
+            "离群点",
+            "异常值",
+            "outliers"
+          ]
+        },
+        {
+          "path": "box.boxWidth",
+          "type": "number",
+          "labelZh": "箱体宽度",
+          "labelEn": "Box width",
+          "level": "advanced",
+          "default": 0.6,
+          "min": 0.1,
+          "max": 1,
+          "step": 0.05,
+          "aliases": [
+            "箱体宽度",
+            "箱子宽度"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "box"
+        ]
+      },
+      "appliesTo": "chart"
+    },
+    {
+      "id": "data",
+      "labelZh": "数据列映射",
+      "labelEn": "Data columns",
+      "order": 90,
+      "items": [
+        {
+          "path": "data.x",
+          "type": "text",
+          "labelZh": "X 列",
+          "labelEn": "X column",
+          "level": "advanced",
+          "default": "auto",
+          "aliases": [
+            "x 列",
+            "横轴列",
+            "x 轴数据",
+            "x column"
+          ],
+          "help": "填列名；“auto”表示自动推断"
+        },
+        {
+          "path": "data.y",
+          "type": "text",
+          "labelZh": "Y 列",
+          "labelEn": "Y column",
+          "level": "advanced",
+          "default": "auto",
+          "aliases": [
+            "y 列",
+            "纵轴列",
+            "y 轴数据",
+            "y column"
+          ],
+          "help": "填列名；“auto”表示自动推断"
+        },
+        {
+          "path": "data.group",
+          "type": "text",
+          "labelZh": "分组列",
+          "labelEn": "Group column",
+          "level": "advanced",
+          "default": "auto",
+          "aliases": [
+            "分组列",
+            "类别列",
+            "group column"
+          ],
+          "help": "填列名；“auto”表示自动推断"
+        },
+        {
+          "path": "data.value",
+          "type": "text",
+          "labelZh": "数值列",
+          "labelEn": "Value column",
+          "level": "advanced",
+          "default": "auto",
+          "aliases": [
+            "数值列",
+            "值列",
+            "value column"
+          ],
+          "help": "填列名；“auto”表示自动推断"
+        },
+        {
+          "path": "data.lat",
+          "type": "text",
+          "labelZh": "纬度列",
+          "labelEn": "Latitude column",
+          "level": "advanced",
+          "default": "auto",
+          "aliases": [
+            "纬度列",
+            "lat 列",
+            "latitude"
+          ],
+          "help": "地图点数据建议显式指定，或保持 auto"
+        },
+        {
+          "path": "data.lon",
+          "type": "text",
+          "labelZh": "经度列",
+          "labelEn": "Longitude column",
+          "level": "advanced",
+          "default": "auto",
+          "aliases": [
+            "经度列",
+            "lon 列",
+            "longitude"
+          ],
+          "help": "地图点数据建议显式指定，或保持 auto"
+        }
+      ],
+      "appliesTo": "all"
+    },
+    {
+      "id": "compose",
+      "labelZh": "多子图合成",
+      "labelEn": "Composite",
+      "order": 95,
+      "items": [
+        {
+          "path": "compose.rows",
+          "type": "number",
+          "labelZh": "行数",
+          "labelEn": "Rows",
+          "level": "basic",
+          "default": 0,
+          "min": 0,
+          "max": 6,
+          "step": 1,
+          "integer": true,
+          "aliases": [
+            "行数",
+            "几行",
+            "rows"
+          ],
+          "help": "0 表示自动（接近方形）"
+        },
+        {
+          "path": "compose.cols",
+          "type": "number",
+          "labelZh": "列数",
+          "labelEn": "Columns",
+          "level": "basic",
+          "default": 0,
+          "min": 0,
+          "max": 6,
+          "step": 1,
+          "integer": true,
+          "aliases": [
+            "列数",
+            "几列",
+            "cols"
+          ],
+          "help": "0 表示自动"
+        },
+        {
+          "path": "compose.gapXMm",
+          "type": "number",
+          "labelZh": "水平间距",
+          "labelEn": "Horizontal gap",
+          "level": "basic",
+          "default": 4.0,
+          "min": 0,
+          "max": 30,
+          "step": 0.5,
+          "unit": "mm",
+          "aliases": [
+            "子图间距",
+            "水平间距",
+            "gap x"
+          ]
+        },
+        {
+          "path": "compose.gapYMm",
+          "type": "number",
+          "labelZh": "垂直间距",
+          "labelEn": "Vertical gap",
+          "level": "basic",
+          "default": 4.0,
+          "min": 0,
+          "max": 30,
+          "step": 0.5,
+          "unit": "mm",
+          "aliases": [
+            "行间距",
+            "垂直间距",
+            "gap y"
+          ]
+        },
+        {
+          "path": "compose.align",
+          "type": "enum",
+          "labelZh": "对齐方式",
+          "labelEn": "Alignment",
+          "level": "advanced",
+          "default": "axes",
+          "options": [
+            "none",
+            "axes"
+          ],
+          "optionLabels": {
+            "none": "不对齐",
+            "axes": "轴框对齐"
+          },
+          "aliases": [
+            "对齐",
+            "轴框对齐",
+            "align"
+          ]
+        },
+        {
+          "path": "compose.optimize",
+          "type": "bool",
+          "labelZh": "排版优化",
+          "labelEn": "Optimise layout",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "排版优化",
+            "自动排版",
+            "optimize"
+          ],
+          "help": "开启后等宽等高、轴框对齐、编号统一、总标题居中、边距最小化"
+        },
+        {
+          "path": "compose.shareColorbar",
+          "type": "bool",
+          "labelZh": "共享色带",
+          "labelEn": "Shared colorbar",
+          "level": "advanced",
+          "default": false,
+          "aliases": [
+            "共享色带",
+            "共用色带"
+          ]
+        },
+        {
+          "path": "compose.legendPerPanel",
+          "type": "bool",
+          "labelZh": "每面板独立图例",
+          "labelEn": "Legend per panel",
+          "level": "advanced",
+          "default": true,
+          "aliases": [
+            "面板图例",
+            "每图图例"
+          ]
+        },
+        {
+          "path": "compose.panelLabel.show",
+          "type": "bool",
+          "labelZh": "显示子图编号",
+          "labelEn": "Show panel labels",
+          "level": "basic",
+          "default": true,
+          "aliases": [
+            "子图编号",
+            "abcdef",
+            "panel label"
+          ]
+        },
+        {
+          "path": "compose.panelLabel.style",
+          "type": "enum",
+          "labelZh": "编号样式",
+          "labelEn": "Label style",
+          "level": "basic",
+          "default": "(a)",
+          "options": [
+            "(a)",
+            "a"
+          ],
+          "optionLabels": {
+            "(a)": "(a) 带括号",
+            "a": "a 不带括号"
+          },
+          "aliases": [
+            "编号样式",
+            "括号形式",
+            "label style"
+          ]
+        },
+        {
+          "path": "compose.panelLabel.position",
+          "type": "enum",
+          "labelZh": "编号位置",
+          "labelEn": "Label position",
+          "level": "basic",
+          "default": "upper left",
+          "options": [
+            "upper left",
+            "upper right",
+            "lower left",
+            "lower right"
+          ],
+          "optionLabels": {
+            "upper left": "左上",
+            "upper right": "右上",
+            "lower left": "左下",
+            "lower right": "右下"
+          },
+          "aliases": [
+            "编号位置",
+            "标签位置",
+            "label position"
+          ]
+        }
+      ],
+      "visibleWhen": {
+        "path": "kind",
+        "in": [
+          "compose"
+        ]
+      },
+      "appliesTo": "compose"
+    },
+    {
+      "id": "code",
+      "labelZh": "自定义代码",
+      "labelEn": "Custom code",
+      "order": 97,
+      "items": [
+        {
+          "path": "customPatch",
+          "type": "text",
+          "labelZh": "自定义 Python 代码",
+          "labelEn": "Custom patch",
+          "level": "advanced",
+          "default": "",
+          "multiline": true,
+          "aliases": [
+            "自定义",
+            "定制代码",
+            "改代码",
+            "customPatch"
+          ],
+          "help": "面板绘制完成后执行；可用 fig/axes/ax/np/plt/mpl/spec；异常只记 warning 不影响出图"
+        }
+      ],
+      "appliesTo": "all"
+    }
+  ]
+}
